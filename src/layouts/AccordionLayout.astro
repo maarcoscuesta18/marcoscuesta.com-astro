@@ -1,10 +1,10 @@
 ---
 import { Icon } from "astro-icon";
-import BaseLayout from "./BaseLayout.astro";
-const { title, icon } = Astro.props;
+import CVLayout from "./CVLayout.astro";
+const { title, icon } = Astro.props
 ---
 
-<BaseLayout>
+<CVLayout >
     <li class="relative border-b border-text/30" x-data="{selected:null}">
   <button
     type="button"
@@ -39,4 +39,4 @@ const { title, icon } = Astro.props;
   </div>
 </li>
 
-</BaseLayout>
+</CVLayout>

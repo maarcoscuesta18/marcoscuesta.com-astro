@@ -1,9 +1,9 @@
 // Personal Information --> #hero section
-export const name = "Peter Griffin"
-export const designation = "Safety Inspector"
-export const location = "Quahog, Rhode Island"
-export const pronouns = "he/him"
-export const website = "https://petergriffin.com"
+export const name = "Marcos Cuesta"
+export const designation = "RPA Engineer"
+export const location = "Madrid, Spain"
+export const pronouns = ""
+export const website = "https://marcoscuesta.com"
 
 // About
 export const about = "An adventurous man working as a safety inspector with a quirky sense of humor. Husband to Louis Griffin. Father of Chris, Brian, and Stewie."
@@ -11,13 +11,31 @@ export const about = "An adventurous man working as a safety inspector with a qu
 // Work Experience --> #work section
 export const work = [
 	{
-		from: "2001",
+		from: "July 2023",
 		to: "Present",
-		role: "Safety Inspector",
-		org: "Quahog Safety Department",
-		org_url: "https://quahog.gov/safety",
-		location: "Quahog, Rhode Island",
-		skills: "Safety Inspection, Risk Assessment, Emergency Response"
+		role: "RPA Engineer",
+		org: "NTT Data",
+		org_url: "https://nttdata.com",
+		location: "Madrid, Spain",
+		skills: "Visual Basic .NET (VB.NET) · Robotic Process Automation (RPA) · UiPath"
+	},
+	{
+		from: "June 2021",
+		to: "July 2023",
+		role: "Junior Engineer",
+		org: "NTT Data",
+		org_url: "https://nttdata.com",
+		location: "Madrid, Spain",
+		skills: "Desarrollador en el equipo RPA. Tecnologia Utilizada UiPath. Funciones y responsabilidades: 		• Diseño y desarrollo de procesos y evolutivos RPA.		• Desarrollo de documentación Funcional y Técnica (PDD’s Y SDD’s) 		• Desarrollo y diseño de Pruebas. 		• Mantenimiento de procesos RPA"
+	},
+	{
+		from: "April 2021",
+		to: "June 2021",
+		role: "Intern",
+		org: "NTT Data",
+		org_url: "https://nttdata.com",
+		location: "Madrid, Spain",
+		skills: "Intern in the RPA team. Tecnology used UiPath"
 	}
 ]
 
@@ -46,41 +64,44 @@ export const projects = [
 // Education --> #education section
 export const education = [
 	{
-		from: "1995",
-		to: "1999",
-		institute: "Quahog High School",
-		course: "High School Diploma",
-		location: "Quahog, Rhode Island"
+		from: "2022",
+		to: "2026",
+		institute: "Universitat Oberta de Catalunya",
+		course: "IT Engineering",
+		location: "Madrid, Spain"
 	},
 	{
-		from: "1999",
-		to: "2003",
-		institute: "Quahog Community College",
-		course: "Bachelor of Science in Safety Management",
-		location: "Quahog, Rhode Island"
+		from: "2019",
+		to: "2021",
+		institute: "CEEP",
+		course: "CFGS Desarrollo de aplicaciones multiplataforma",
+		location: "Madrid, Spain"
 	},
 	{
-		from: "2003",
-		to: "2005",
-		institute: "Safety University",
-		course: "Master of Science in Safety Engineering",
-		location: "Boston, Massachusetts"
+		from: "2017",
+		to: "2021",
+		institute: "CEM Hipatia FUHEM",
+		course: "CFGM de Sistemas Microinformáticos y Redes",
+		location: "Madrid, Spain"
 	}
 ]
 
 // Contact --> #contact section
 export const contact = [
 	{
-		source_name: "Email",
-		source: "peter.griffin@example.com",
+		source_name: "Send me a email",
+		source: "mailto:contact@marcoscuesta.com",
+		title: "Email",
 	},
 	{
-		source_name: "Twitter",
-		source: "https://twitter.com/PeterGriffin",
+		source_name: "Go to github",
+		source: "https://github.com/maarcoscuesta18",
+		title: "Github",
 	},
 	{
-		source_name: "LinkedIn",
-		source: "https://www.linkedin.com/in/peter-griffin",
+		source_name: "Go to LinkedIn",
+		source: "https://www.linkedin.com/in/marcos-cuesta-abanades",
+		title: "LinkedIn",
 	},
 ]
 
@@ -88,25 +109,32 @@ export const contact = [
 
 export const certificates = [
 	{
-		issued: "2005",
-		title: "Certified Safety Inspector",
-		org: "National Safety Association",
-		url: "https://certi.com/url",
-		description: "Certification in safety inspection and risk assessment.",
+		issued: "2022",
+		title: "UiPath Certified Professional Advanced RPA Developer (UiARD)",
+		org: "UiPath",
+		url: "https://credentials.uipath.com/0617ffd7-239e-41c4-976b-7150acc7cc85?record_view=true",
+		description: "Certification in UiPath Certified Professional Advanced RPA Developer (UiARD)",
 	},
 	{
-		issued: "2006",
-		title: "Emergency Response Training",
-		org: "Quahog Safety Department",
-		url: "https://certi.com/url",
-		description: "Training in handling emergency situations and crisis management.",
+		issued: "2022",
+		title: "Automation Anywhere Certified Advanced RPA Professional (Automation 360)",
+		org: "Automation Anywhere",
+		url: "https://certificates.automationanywhere.com/4e4e4ece-3e2a-45ac-902f-012114f14e61#gs.s9dku9",
+		description: "Automation Anywhere Certified Advanced RPA Professional (Automation 360)",
 	},
 	{
-		issued: "2007",
-		title: "Safety Leadership Workshop",
-		org: "Safety Leaders International",
-		url: "https://certi.com/url",
-		description: "Leadership training in safety management and communication.",
+		issued: "2022",
+		title: "Blue Prism Certified Associate Developer",
+		org: "Blue Prism",
+		url: "https://www.credly.com/badges/c94ced5e-c52e-4349-9fea-e3e27641996c/public_url",
+		description: "Blue Prism Certified Associate Developer",
+	},
+	{
+		issued: "2022",
+		title: "ABBYY FlexiCapture 12 Certified Specialist",
+		org: "ABBYY",
+		url: "https://university.abbyy.com/certs/11356/D60D8EE59F534C91A0A04C7D2215C6EC44623.pdf",
+		description: "ABBYY FlexiCapture 12 Certified Specialist",
 	}
 ]
 

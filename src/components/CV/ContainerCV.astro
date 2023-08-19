@@ -1,11 +1,11 @@
 ---
-import * as CONTENT from "../pages/content"
-import AccordionLayout from "../layouts/AccordionLayout.astro";
-import Card from "./Card.astro";
+import * as CONTENT from "../../pages/content"
+import AccordionLayout from "../../layouts/AccordionLayout.astro";
+import Card from "./CardCV.astro";
 ---
 
 <ul class="shadow-box">
-  <AccordionLayout title={"About"} icon={"mdi:account-badge-outline"}>
+  <AccordionLayout title={"About"}  icon={"mdi:account-badge-outline"}>
     {CONTENT.about}
   </AccordionLayout>
     <AccordionLayout title={"Work"} icon={"ic:baseline-work-outline"}>
@@ -25,7 +25,7 @@ import Card from "./Card.astro";
       }
     </AccordionLayout>
 
-    <AccordionLayout title={"Projects"} icon={"ion:md-build"}>
+    <!--<AccordionLayout title={"Projects"} icon={"ion:md-build"}>
       {
         CONTENT.projects.map((item) => {
           return (
@@ -40,7 +40,7 @@ import Card from "./Card.astro";
           );
         })
       }
-    </AccordionLayout>
+    </AccordionLayout>-->
 
     <AccordionLayout title={"Education"} icon={"carbon:education"}>
       {
@@ -76,7 +76,7 @@ import Card from "./Card.astro";
       }
     </AccordionLayout>
 
-    <AccordionLayout title={"Blogs/Writings"} icon={"ic:round-edit-note"}>
+    <!--<AccordionLayout title={"Blogs/Writings"} icon={"ic:round-edit-note"}>
       {
         CONTENT.blogs.map((item) => {
           return (
@@ -91,9 +91,9 @@ import Card from "./Card.astro";
           );
         })
       }
-    </AccordionLayout>
+    </AccordionLayout>-->
 
-    <AccordionLayout title={"Achievements"} icon={"mdi:trophy-award"}>
+    <!--<AccordionLayout title={"Achievements"} icon={"mdi:trophy-award"}>
       {
         CONTENT.achievements.map((item) => {
           return (
@@ -108,7 +108,7 @@ import Card from "./Card.astro";
           );
         })
       }
-    </AccordionLayout>
+    </AccordionLayout>-->
 
     <AccordionLayout title={"Contact"} icon={"ri:contacts-book-fill"}>
       {
@@ -116,7 +116,7 @@ import Card from "./Card.astro";
           return (
             <Card
               title={""}
-              timeframe=""
+              timeframe={item.title}
               description=""
               tags=""
               url={item.source}

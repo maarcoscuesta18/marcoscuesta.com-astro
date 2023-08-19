@@ -93,5 +93,4 @@ Astro-Vitae is licensed under the MIT license — see the [LICENSE](https://gith
 <a href="https://github.com/uskhokhar/astro-vitae/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=uskhokhar/astro-vitae" />
 </a>
-
-Happy Hecking 🙌 
+ 
