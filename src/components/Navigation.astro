@@ -1,14 +1,22 @@
 ---
-
+const { currentPage } = Astro.props;
 ---
 <nav class='mb-10'>
     <div class='container flex flex-wrap items-center justify-between mx-auto'>
         <div class='w-full'>
             <ul class='flex justify-around text-lg p-4'>
-                <li><a href='/' class='text-white hover:text-orange-400'>Home</a></li>
-                <li><a href='#about' class='text-white hover:text-orange-400'>About</a></li>
-                <li><a href='/cv' class='text-white hover:text-orange-400'>CV</a></li>
+                <li><a href='/' class={`nav-link ${currentPage === 'home' ? 'current-page' : ''}`}>Home</a></li>
+                <li><a href='/#about' class={`nav-link ${currentPage === 'about' ? 'current-page' : ''}`}>About</a></li>
+                <li><a href='/cv' class={`nav-link ${currentPage === 'cv' ? 'current-page' : ''}`}>CV</a></li>
             </ul>
         </div>
     </div>
 <nav>
+<style>
+    .nav-link {
+      @apply text-white hover:text-blue-500 font-bold;
+    }
+    .current-page {
+      @apply text-blue-500 font-bold;
+    }
+</style>

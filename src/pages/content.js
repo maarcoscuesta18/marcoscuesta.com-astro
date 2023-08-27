@@ -6,7 +6,9 @@ export const pronouns = ""
 export const website = "https://marcoscuesta.com"
 
 // About
-export const about = "An adventurous man working as a safety inspector with a quirky sense of humor. Husband to Louis Griffin. Father of Chris, Brian, and Stewie."
+export const about = 
+"Developer with 2 years of experience in the development of RPA processes under the UiPath environment based on .NET and VB,"+ 
+"with knowledge in other programming languages such as C#, Java, and Python. Working on various projects, demonstrating skills in teamwork and meeting deadlines."
 
 // Work Experience --> #work section
 export const work = [
@@ -92,21 +94,34 @@ export const contact = [
 		source_name: "Send me a email",
 		source: "mailto:contact@marcoscuesta.com",
 		title: "Email",
+		source_icon: "email-svgrepo-com.svg",
 	},
 	{
 		source_name: "Go to github",
 		source: "https://github.com/maarcoscuesta18",
 		title: "Github",
+		source_icon: "github-mark-white.svg",
 	},
 	{
 		source_name: "Go to LinkedIn",
 		source: "https://www.linkedin.com/in/marcos-cuesta-abanades",
 		title: "LinkedIn",
+		source_icon: "LinkedIn-Icon-Logo.wine.svg",
 	},
 ]
 
+// Languages --> #languages section
+export const languages = [
+	{
+		language: "Spanish",
+		level: "Native"
+	},
+	{
+		language: "English",
+		level: "Professional"
+	}
+]
 // Certifications --> #certificate section
-
 export const certificates = [
 	{
 		issued: "2022",
@@ -177,5 +192,28 @@ export const achievements = [
 		title: "Safety Campaign Excellence",
 		year: "2013",
 		decription: "Acknowledged for leading a successful safety campaign that reached thousands of residents."
+	}
+]
+
+export const skills = [
+	{
+		title: "Visual Basic .NET (VB.NET)",
+		source_icon: "visual-studio.svg",
+		source:"https://visualstudio.microsoft.com/es/"
+	},
+	{
+		title: "UiPath",
+		source_icon: "uipath.svg",
+		source:"https://www.uipath.com/"
+	},
+	{
+		title: "C#",
+		source_icon: "c-sharp.svg",
+		source:"https://docs.microsoft.com/es-es/dotnet/csharp/"
+	},
+	{
+		title: "Java",
+		source_icon: "java.svg",
+		source:"https://www.java.com/es/"
 	}
 ]

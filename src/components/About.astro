@@ -1,5 +1,15 @@
 ---
 import * as content from '../pages/content.js';
+const data = [
+    {
+        title: "Socials",
+        array: content.contact
+    },
+    {
+        title:"Skills",
+        array: content.skills
+    }
+];
 ---
 <div class="min-h-screen" id="about">
     <h1 class="text-4xl font-bold text-center">About Me!</h1>
@@ -8,10 +18,27 @@ import * as content from '../pages/content.js';
         <div class="p-5 text-justify">
             <h1 class="text-2xl mb-2">{ content.name } a {content.designation} based in {content.location}</h1>
             <p>{content.about}</p>
+            <div>
+                {data.map((item) => (
+                    <h1 class="text-5xl font-extrabold text-center bg-clip-text text-transparent bg-gradient-to-r from-pink-500 to-violet-500">{item.title}</h1>                    
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                        {item.array.map((subItem) => (
+                            <div class="rounded-lg shadow-lg">
+                                <img src={subItem.source_icon} alt={subItem.title} class="w-full h-48 object-scale-down "/>
+                            </div>
+                        ))}
+                    </div>
+                ))}
+            </div>
             <button class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 
             hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 
              text-white font-bold py-2 px-4 rounded mt-5">
                 <a href="/cv" class="bg-transparent">Take a look</a>
+            </button>
+            <button class="bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 
+            hover:from-blue-700 hover:via-purple-700 hover:to-pink-700 
+             text-white font-bold py-2 px-4 rounded mt-5">
+                <a href="/cv" class="bg-transparent">Download CV</a>
             </button>
         </div>
     </div>
