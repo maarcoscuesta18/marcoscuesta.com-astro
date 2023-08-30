@@ -5,7 +5,7 @@ const { title, icon } = Astro.props
 ---
 
 <CVLayout >
-    <li class="relative border-b border-text/30" x-data="{selected:null}">
+    <li class="relative border-b border-black" x-data="{selected:null}">
   <button
     type="button"
     class="w-full px-3 py-3 text-left"
@@ -13,7 +13,7 @@ const { title, icon } = Astro.props
   >
     <div class="flex items-center justify-between">
       <h4
-        class="text-2xl font-mono text-text/80 hover:text-text/95 flex justify-center items-start"
+        class="text-2xl font-mono  flex justify-center items-start"
       >
         <Icon name={icon} class="w-8 h-8 mr-4" />
         {title}
@@ -33,7 +33,7 @@ const { title, icon } = Astro.props
     x-ref="container1"
     x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
   >
-    <div class="py-4 px-2 text-text/60">
+    <div class="py-4 px-2 ">
       <slot />
     </div>
   </div>

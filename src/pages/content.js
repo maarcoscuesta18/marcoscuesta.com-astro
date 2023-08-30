@@ -69,7 +69,7 @@ export const education = [
 		from: "2022",
 		to: "2026",
 		institute: "Universitat Oberta de Catalunya",
-		course: "IT Engineering",
+		course: "Computer Engineering",
 		location: "Madrid, Spain"
 	},
 	{
