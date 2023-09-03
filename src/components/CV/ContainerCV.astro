@@ -24,25 +24,7 @@ import Card from "./CardCV.astro";
         })
       }
   </AccordionLayout>
-
-    <!--<AccordionLayout title={"Projects"} icon={"ion:md-build"}>
-      {
-        CONTENT.projects.map((item) => {
-          return (
-            <Card
-              title={item.title}
-              timeframe="2022-2023"
-              description={item.description}
-              tags={item.tech}
-              url={item.url}
-              url_name={"Open Project"}
-            />
-          );
-        })
-      }
-    </AccordionLayout>-->
-
-    <AccordionLayout title={"Education"} icon={"carbon:education"}>
+  <AccordionLayout title={"Education"} icon={"carbon:education"}>
       {
         CONTENT.education.map((item) => {
           return (
@@ -57,9 +39,8 @@ import Card from "./CardCV.astro";
           );
         })
       }
-    </AccordionLayout>
-
-    <AccordionLayout title={"Certifications"} icon={"carbon:certificate"}>
+  </AccordionLayout>
+  <AccordionLayout title={"Certifications"} icon={"carbon:certificate"}>
       {
         CONTENT.certificates.map((item) => {
           return (
@@ -75,41 +56,6 @@ import Card from "./CardCV.astro";
         })
       }
     </AccordionLayout>
-
-    <!--<AccordionLayout title={"Blogs/Writings"} icon={"ic:round-edit-note"}>
-      {
-        CONTENT.blogs.map((item) => {
-          return (
-            <Card
-              title={item.title}
-              timeframe={item.date}
-              description={item.description}
-              tags=""
-              url={item.url}
-              url_name={item.publisher}
-            />
-          );
-        })
-      }
-    </AccordionLayout>-->
-
-    <!--<AccordionLayout title={"Achievements"} icon={"mdi:trophy-award"}>
-      {
-        CONTENT.achievements.map((item) => {
-          return (
-            <Card
-              title={item.title}
-              timeframe={item.year}
-              description={item.decription}
-              tags=""
-              url="#"
-              url_name=""
-            />
-          );
-        })
-      }
-    </AccordionLayout>-->
-
     <AccordionLayout title={"Languagues"} icon={"mdi:book"}>
       {
         CONTENT.languages.map((item) => {
