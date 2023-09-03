@@ -258,4 +258,44 @@ h5 {
 		gap: 12rem;
 	}
 }
+.neonButton {
+	border: 2px solid var(--accent-regular);
+  
+	/* Rounded Corners */
+	border-radius: 0.5rem;
+	
+	/* Box Shadow */
+	box-shadow: 0 0 2px #fff, 
+				inset 0 0 2px #fff, 
+				0 0 5px var(--accent-regular), 
+				0 0 15px var(--accent-regular), 
+				0 0 30px var(--accent-regular);
+	transition: all 0.5s ease;
+  }
+   
+.neonButton:hover{
+	color: var(--accent-dark);
+	  border: 2px solid var(--accent-dark);
+  
+	  /* Rounded Corners */
+	  border-radius: 0.5rem;
+	  
+	  /* Box Shadow */
+	  box-shadow: 0 0 2px #fff, 
+				  inset 0 0 2px #fff, 
+				  0 0 5px var(--accent-dark), 
+				  0 0 15px var(--accent-dark), 
+				  0 0 30px var(--accent-dark);
+}
 
+.neonText {
+	text-shadow:
+	  0 0 5px #fff,
+	  0 0 10px #fff,
+	  0 0 20px var(--accent-light),
+	  0 0 40px var(--accent-dark),
+	  0 0 80px var(--accent-dark),
+	  0 0 90px var(--accent-dark),
+	  0 0 100px var(--accent-dark),
+	  0 0 150px var(--accent-dark);  
+}
