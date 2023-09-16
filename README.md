@@ -1,30 +1,23 @@
-# Astro Starter Kit: Portfolio
+# Protfolio personal website
 
-```
-npm create astro@latest -- --template portfolio
-```
+Repository of my personal portfolio website. This site showcases my work, skills, and professional journey.
 
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/portfolio)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/portfolio)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/portfolio/devcontainer.json)
+![Portfolio Screenshot](./screenshot.png) <!-- Replace with your actual screenshot -->
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+## Features
 
-![portfolio](https://user-images.githubusercontent.com/357379/210779178-a98f0fb7-6b1a-4068-894c-8e1403e26654.jpg)
+- **About Me**: A brief introduction about who I am.
+- **Projects**: A showcase of my projects with links to live demos and GitHub repositories.
+- **Contact**: Ways to get in touch with me.
+- **CV**: My CV (using template from @USKhokhar/astro-vitae).
 
-## 🧞 Commands
+## Technologies Used
 
-All commands are run from the root of the project, from a terminal:
+- HTML, CSS, and JavaScript
+- Astro 
+- Vercel for deployment
+- Tailwind CSS for styling
+- I18n for internationalization (en and es)
+## Contact
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Feel free to contact me at [contact@marcoscuesta.com](mailto:contact@marcoscuesta.com). You can also find me on [LinkedIn](https://www.linkedin.com/in/marcos-cuesta-abanades/).

@@ -1,15 +1,23 @@
 ---
-import Icon from './global/Icon.astro';
-import ThemeToggle from './global/ThemeToggle.astro';
-import type { iconPaths } from './global/IconPaths';
+import Icon from './Icon/Icon.astro';
+import ThemeToggle from './ThemeToggle.astro';
+import type { iconPaths } from './Icon/IconPaths';
+import { getLangFromUrl, useTranslations,useTranslatedPath } from '../i18n/utils';
+import LanguagePicker from './LanguaguePicker.astro';
+import LanguaguePicker from './LanguaguePicker.astro';
+
+const lang = getLangFromUrl(Astro.url);
+const t = useTranslations(lang);
+const translatePath = useTranslatedPath(lang);
 
 /** Main menu items */
 const textLinks: { label: string; href: string }[] = [
-	{ label: 'Home', href: '/' },
-	{ label: 'About', href: '/#about' },
-	{ label: 'CV', href: '/cv' },
+	{ label: `${t('nav.home')}`, href: translatePath(`/`) },
+	{ label: `${t('nav.about')}`, href: translatePath('/#about') },
+	{ label: `${t('nav.projects')}`, href: translatePath('/#projects') },
+	//{ label: `${t('nav.pacman')}`, href: translatePath('/pacman') },
+	{ label: `${t('nav.cv')}`, href: translatePath('/cv') },
 ];
-
 /** Icon links to social media — edit these with links to your profiles! */
 const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[] = [
 	{ label: 'GitHub', href: 'https://github.com/maarcoscuesta18', icon: 'github-logo' },
@@ -36,13 +44,13 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 				textLinks.map(({ label, href }) => (
 					<li>
 						<a
-							aria-current={Astro.url.pathname === href}
+							aria-current={Astro.url.pathname === href }
 							class:list={[
 								'link',
 								{
-									active:
+									active: 
 										Astro.url.pathname === href ||
-										(href !== '/' && Astro.url.pathname.startsWith(href)),
+										(href !== "/" && Astro.url.pathname.startsWith(href)),
 								},
 							]}
 							href={href}
@@ -80,7 +88,7 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 								{
 									active:
 										Astro.url.pathname === href ||
-										(href !== '/' && Astro.url.pathname.startsWith(href)),
+										(href !== `/${lang}/` && Astro.url.pathname.startsWith(href)),
 								},
 							]}
 							href={href}
@@ -102,10 +110,11 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 					))
 				}
 			</div>
-
+			
 			<div class="theme-toggle">
 				<ThemeToggle />
 			</div>
+			<LanguaguePicker />
 		</div>
 	</div>
 </nav>

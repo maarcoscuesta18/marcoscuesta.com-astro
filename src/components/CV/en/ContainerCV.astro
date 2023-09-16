@@ -1,7 +1,7 @@
 ---
-import * as CONTENT from "../../pages/content"
-import AccordionLayout from "../../layouts/AccordionLayout.astro";
-import Card from "./CardCV.astro";
+import * as CONTENT from "../../../pages/en/content"
+import AccordionLayout from "../../../layouts/AccordionLayout.astro";
+import Card from "../CardCV.astro";
 ---
 
 <ul class="shadow-box">
@@ -55,14 +55,14 @@ import Card from "./CardCV.astro";
           );
         })
       }
-    </AccordionLayout>
-    <AccordionLayout title={"Languagues"} icon={"mdi:book"}>
+  </AccordionLayout>
+  <AccordionLayout title={"Languagues"} icon={"mdi:book"}>
       {
         CONTENT.languages.map((item) => {
           return (
             <Card
-              title={item.language}
-              timeframe={item.level}
+              title={item.level}
+              timeframe={item.language}
               description=""
               tags=""
               url={""}
@@ -71,8 +71,24 @@ import Card from "./CardCV.astro";
           );
         })
       }
-    </AccordionLayout>
-    <AccordionLayout title={"Contact"} icon={"ri:contacts-book-fill"}>
+  </AccordionLayout>
+  <AccordionLayout title={"Projects"} icon={"ion:md-build"}>
+    {
+      CONTENT.projects.map((item) => {
+        return (
+          <Card
+            title={item.title}
+            timeframe="2022-2023"
+            description={item.description}
+            tags={item.tech}
+            url={item.url}
+            url_name={"Open Project"}
+          />
+        );
+      })
+    }
+  </AccordionLayout>
+  <AccordionLayout title={"Contact"} icon={"ri:contacts-book-fill"}>
       {
         CONTENT.contact.map((item) => {
           return (
@@ -87,5 +103,5 @@ import Card from "./CardCV.astro";
           );
         })
       }
-    </AccordionLayout>
+  </AccordionLayout>
 </ul>

@@ -7,8 +7,9 @@ export const website = "https://marcoscuesta.com"
 
 // About
 export const about = 
-"Developer with 2 years of experience in the development of RPA processes under the UiPath environment based on .NET and VB,"+ 
-"with knowledge in other programming languages such as C#, Java, and Python. Working on various projects, demonstrating skills in teamwork and meeting deadlines."
+"Developer with 2 years of experience in the development of RPA processes under the UiPath environment based on .NET, C# and VB,"+ 
+"with knowledge in other programming languages such as Java, and Python. Passionate about technology and innovation specially in "+
+"the field of web development and automated RPA processes."
 
 // Work Experience --> #work section
 export const work = [
@@ -44,22 +45,46 @@ export const work = [
 // Projects --> #project section
 export const projects = [
 	{
-		title: "Project Griffin",
-		description: "A project to improve safety standards in Quahog by implementing innovative safety measures.",
-		url: "https://projectgriffin.com",
-		tech: "Safety Equipment, Training Programs, Community Outreach",
+		title: "UOC App",
+		description: "A android app using my univeristy webpage.",
+		url: "https://github.com/maarcoscuesta18/UOC",
+		tech: "Java,Android",
+		image: "/uoc.webp",
 	},
 	{
-		title: "Family Safety Campaign",
-		description: "An initiative to promote safety awareness among families in Quahog.",
-		url: "https://safefamilyquahog.com",
-		tech: "Workshops, Educational Material, Public Events",
+		title: "FalconTracker (Twitter Bot)",
+		description: "Tracker for Falcon aircraft models--> T.18-2, T.18-3,T.18-4, T.18-5. Using selenium and node.js posting a tweet withe moves of the aircrafts. Inspired on elonmusktracker.com",
+		url: "https://github.com/maarcoscuesta18/FalconTracker",
+		tech: "JavaScript,Node.js,Selenium,Twitter API",
+		image: "/falcon.webp"
 	},
 	{
-		title: "Road Safety Initiative",
-		description: "A campaign to enhance road safety and reduce accidents in Quahog.",
-		url: "https://roadsafetyquahog.com",
-		tech: "Traffic Analysis, Signage Improvement, Public Awareness",
+		title: "Wordle",
+		description: "Wordle app on React",
+		url: "https://github.com/maarcoscuesta18/mywordle",
+		tech: "React,JavaScript,HTML & CSS",
+		image: "/wordle.webp"
+	},
+	{
+		title: "Invoices management app",
+		description: "Private webapp on django for invoices that generates a pdf using his own java api.",
+		url: "https://github.com/maarcoscuesta18/myapi",
+		tech: "Django,Python,Java,JavaScript,Firebase",
+		image: "/invoices.webp"
+	},
+	{
+		title: "Supermarket scrapper",
+		description: "Scrapper that scraps all products from all spain supermarkets in Spain (Still in development). All the data recolected is generated in a csv file.",
+		url: "https://github.com/maarcoscuesta18/SpainSupermarket-scrapper-master",
+		tech: "Python,Selenium,BeautifulSoup,Numpy",
+		image: "/scrapper.webp"
+	},
+	{
+		title: "marcoscuesta.com",
+		description: "Portfolio website with a pacman game using Astro.",
+		url: "https://github.com/maarcoscuesta18/marcoscuesta.com-astro",
+		tech: "Astro,JavaScript,HTML & CSS",
+		image: "/github-mark.svg"
 	}
 ]
 
@@ -150,48 +175,6 @@ export const certificates = [
 		org: "ABBYY",
 		url: "https://university.abbyy.com/certs/11356/D60D8EE59F534C91A0A04C7D2215C6EC44623.pdf",
 		description: "ABBYY FlexiCapture 12 Certified Specialist",
-	}
-]
-
-// Blogs --> #blogs section
-export const blogs = [
-	{
-		date: "12-July, 2023",
-		url: "https://medium.com/",
-		title: "Adventures in Safety Inspection",
-		description: "Join me in my humorous escapades as a safety inspector in Quahog.",
-		publisher: "Quahog Times",
-	},
-	{
-		date: "25-June, 2023",
-		url: "https://medium.com/",
-		title: "Top 10 Safety Tips for Families",
-		description: "Learn the best safety practices for families to ensure a secure environment.",
-		publisher: "Safety Monthly",
-	}
-]
-
-// Achievements --> #achievement section
-export const achievements = [
-	{
-		title: "Safety Hero Award",
-		year: "2020",
-		decription: "Recognized for outstanding contributions to improving safety standards in Quahog."
-	},
-	{
-		title: "Safety Innovation Prize",
-		year: "2018",
-		decription: "Awarded for implementing innovative safety measures that yielded significant improvements."
-	},
-	{
-		title: "Community Safety Ambassador",
-		year: "2015",
-		decription: "Honored for promoting safety awareness and education in the Quahog community."
-	},
-	{
-		title: "Safety Campaign Excellence",
-		year: "2013",
-		decription: "Acknowledged for leading a successful safety campaign that reached thousands of residents."
 	}
 ]
 

@@ -1,17 +1,13 @@
 ---
-import * as CONTENT from "../../pages/content.js"
+import * as CONTENT from "../../../pages/en/content.js"
 ---
 
 <!-- Hero section -->
-<header class="mx-auto py-8">
-  <article
-    class="grid grid-cols-1 md:grid-cols-3 grid-rows-1 place-items-center w-[98vw] max-w-2xl"
-  >
-    <div
-      class="rounded-full border-primary self-end shadow-2xl md:w-24 w-20 aspect-square"
-    >
+<header class="mx-auto  max-w-2xl py-8">
+  <article class="grid grid-cols-1 md:grid-cols-3 grid-rows-1 place-items-center w-[98vw] max-w-2xl">
+    <div class="rounded-full border-primary self-end shadow-2xl md:w-24 w-20 aspect-square">
       <img
-        src="/profile.jpg"
+        src="/profile.webp"
         alt="profile_picture"
         class="object-cover w-full h-full rounded-full grayscale-[50] hover:grayscale-0 "
       />
@@ -28,8 +24,7 @@ import * as CONTENT from "../../pages/content.js"
       <a
         href={CONTENT.website}
         target="_blank"
-        class="hover:text-blue-300 flex items-center justify-center"
-      >
+        class="hover:text-blue-300 flex items-center justify-center">
         {CONTENT.website}
       </a>
     </div>

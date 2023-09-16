@@ -1,0 +1,38 @@
+---
+import { languages } from '../i18n/ui';
+---
+<div class="relative inline-block">
+  <div class="">
+    <button id="dropdownToggle" type="button" class="px-4 py-2 rounded-lg  focus:outline-none hover:bg-gray-400/30 focus:border-blue-300 focus:ring focus:ring-blue-200 focus:ring-opacity-50">
+      <div class="flex items-center">
+        <img src="/globe.svg" class="h-5 w-5">
+        <!-- Dropdown arrow icon -->
+        <svg class=" h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+          <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+        </svg>
+      </div>
+    </button>
+  </div>
+
+  <div id="dropdownContent" class="hidden origin-top-right absolute right-0 mt-2 w-32 rounded-md shadow-lg bg-[--accent-light] ring-1 ring-black ring-opacity-5">
+    <div class="py-1">
+      {Object.entries(languages).map(([lang, label]) => (
+        <a href={`/${lang}/`} class="block px-4 py-2 text-s hover:bg-gray-400/30 ">{label}</a>
+      ))}
+    </div>
+  </div>
+</div>
+
+<script type="module">
+  const dropdownToggle = document.getElementById('dropdownToggle');
+  const dropdownContent = document.getElementById('dropdownContent');
+
+  dropdownToggle.addEventListener('click', () => {
+    if (dropdownContent.classList.contains('hidden')) {
+      dropdownContent.classList.remove('hidden');
+    } else {
+      dropdownContent.classList.add('hidden');
+    }
+  });
+</script>
+
