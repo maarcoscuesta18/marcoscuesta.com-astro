@@ -36,4 +36,4 @@ export const routes = {
         'cv': 'cv',
     },
    }
-export const showDefaultLang = false;
+export const showDefaultLang = true;
