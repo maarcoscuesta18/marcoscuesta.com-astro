@@ -3,7 +3,7 @@ export const languages = {
     es: 'Spanish',
   };
   
-export const defaultLang = 'es';
+export const defaultLang = 'en';
 
 export const ui = {
   en: {
@@ -36,4 +36,4 @@ export const routes = {
         'cv': 'cv',
     },
    }
-export const showDefaultLang = true;
+export const showDefaultLang = false;
