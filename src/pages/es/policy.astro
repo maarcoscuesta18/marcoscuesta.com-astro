@@ -1,0 +1,23 @@
+---
+import IndexLayout from "../../layouts/indexLayout.astro";
+import * as policy from "./content.js";
+---
+<IndexLayout>
+  <div class="min-h-screen font-bold" id="about">
+      <h1 class="text-6xl font-extrabold text-center">Politica de privacidad</h1>
+      <div class="container mx-auto m-10">
+          <div class="container mx-auto m-10 text-justify">
+            <p class="m-5">Política de Privacidad de IberiaEye.<br> Fecha de vigencia: {new Date().toLocaleDateString("es-ES", { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+            <p class="m-5"><span class="text-2xl bold">Introducción:</span><br> Bienvenido a IberiaEye, tu asistente vial esencial para las carreteras de España. Nos comprometemos a proteger tu privacidad y a manejar tus datos de manera transparente y responsable. Esta Política de Privacidad detalla cómo tratamos tu información y cuáles son tus derechos al respecto.</p>
+            <p class="m-5"><span class="text-2xl bold">Datos que recopilamos:</span><br> IberiaEye no recopila ningún dato personal de sus usuarios. La aplicación solo requiere permisos de internet para su funcionamiento óptimo.</p>
+            <p class="m-5"><span class="text-2xl bold">Uso de la información:</span><br> Aunque no recopilamos datos personales, utilizamos Firebase para analizar el rendimiento de la aplicación y mejorar continuamente su funcionalidad y experiencia de usuario. Estos análisis se basan en datos anónimos y agregados y no pueden ser utilizados para identificar a usuarios individuales.</p>
+            <p class="m-5"><span class="text-2xl bold">Compartición de datos:</span><br> No compartimos, vendemos ni divulgamos tu información personal con terceros, ya que no recopilamos dicha información.</p>
+            <p class="m-5"><span class="text-2xl bold">Seguridad de los datos:</span><br> Aunque no recopilamos datos personales, priorizamos la seguridad y tomamos medidas apropiadas para proteger la integridad y seguridad de cualquier información dentro de la aplicación.</p>
+            <p class="m-5"><span class="text-2xl bold">Derechos del usuario:</span><br> Dado que no recopilamos datos personales, no es necesario que te preocupes por tus derechos de acceso, rectificación, eliminación, etc. Sin embargo, valoramos tus comentarios y preguntas sobre la aplicación y su funcionamiento. Puedes ponerte en contacto con nosotros en cualquier momento a través de contact@marcoscuesta.com.</p>
+            <p class="m-5"><span class="text-2xl bold">Cambios en la Política de Privacidad:</span><br> Podemos actualizar esta Política de Privacidad ocasionalmente para reflejar cambios en nuestra aplicación o por otros motivos operativos, legales o reglamentarios. Si realizamos cambios, te notificaremos a través de una actualización de la aplicación o de otros medios adecuados.</p>
+            <p class="m-5"><span class="text-2xl bold">Contacto:</span><br> Si tienes preguntas o inquietudes acerca de esta Política de Privacidad, no dudes en ponerte en contacto con nosotros a través de contact@marcoscuesta.com.</p>
+            <p class="m-5">Gracias por confiar en IberiaEye y permitirnos ser tus ojos en el camino.</p>                          
+          </div>
+      </div>
+  </div>                
+</IndexLayout>

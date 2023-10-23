@@ -200,3 +200,15 @@ export const skills = [
 		source:"https://www.java.com/es/"
 	}
 ]
+export const privacy_policy_iberiaeye = `
+<p>Privacy Policy of IberiaEye Effective date: ${new Date().toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+<p>Introduction: Welcome to IberiaEye, your essential road assistant for the roads of Spain. We are committed to protecting your privacy and handling your data transparently and responsibly. This Privacy Policy details how we treat your information and what rights you have in this regard.</p>
+<p>Data we collect: IberiaEye does not collect any personal data from its users. The application only requires internet permissions for optimal operation.</p>
+<p>Use of information: Although we do not collect personal data, we use Firebase to analyze the performance of the application and continuously improve its functionality and user experience. These analyses are based on anonymous and aggregated data and cannot be used to identify individual users.</p>
+<p>Data sharing: We do not share, sell, or disclose your personal information to third parties, as we do not collect such information.</p>
+<p>Data security: Although we do not collect personal data, we prioritize security and take appropriate measures to protect the integrity and security of any information within the application.</p>
+<p>User rights: Since we do not collect personal data, you don't need to worry about your rights to access, rectification, deletion, etc. However, we value your feedback and questions about the application and its operation. You can contact us at any time through contact@marcoscuesta.com.</p>
+<p>Changes to the Privacy Policy: We may occasionally update this Privacy Policy to reflect changes in our application or for other operational, legal, or regulatory reasons. If we make changes, we will notify you through an application update or other appropriate means.</p>
+<p>Contact: If you have questions or concerns about this Privacy Policy, please do not hesitate to contact us at contact@marcoscuesta.com.</p>
+<p>Thank you for trusting IberiaEye and allowing us to be your eyes on the road.</p>
+`;

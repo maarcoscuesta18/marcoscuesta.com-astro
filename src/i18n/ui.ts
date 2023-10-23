@@ -26,12 +26,14 @@ export const routes = {
     es: {
         'projects': 'proyectos',
         'about': 'sobremi',
+        'policy': 'policy',
         'pacman': 'pacman',
         'cv': 'cv',
     },
     en: {
         'projects': 'projects',
         'about': 'about',
+        'policy': 'policy',
         'pacman': 'pacman',
         'cv': 'cv',
     },
