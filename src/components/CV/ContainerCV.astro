@@ -1,17 +1,18 @@
 ---
-import * as CONTENT from "../../../pages/content"
-import AccordionLayout from "../../../layouts/AccordionLayout.astro";
-import Card from "../CardCV.astro";
+import * as CONTENT from "../../pages/content.js"
+import AccordionLayout from "../../layouts/AccordionLayout.astro";
+import Card from "./CardCV.astro";
+const {currentRegion} = Astro.props;
 ---
 
 
 <ul class="shadow-box">
-  <AccordionLayout title={"About"}  icon={"mdi:account-badge-outline"}>
-    {CONTENT.about}
+  <AccordionLayout title={CONTENT.titles[currentRegion].about}  icon={"mdi:account-badge-outline"}>
+    {CONTENT.about[currentRegion]}
   </AccordionLayout>
-  <AccordionLayout title={"Work"} icon={"ic:baseline-work-outline"}>
+  <AccordionLayout title={CONTENT.titles[currentRegion].work} icon={"ic:baseline-work-outline"}>
       {
-        CONTENT.work.map((item) => {
+        CONTENT.work[currentRegion].map((item) => {
           return (
             <Card
               title={item.role}
@@ -25,9 +26,9 @@ import Card from "../CardCV.astro";
         })
       }
   </AccordionLayout>
-  <AccordionLayout title={"Education"} icon={"carbon:education"}>
+  <AccordionLayout title={CONTENT.titles[currentRegion].education} icon={"carbon:education"}>
       {
-        CONTENT.education.map((item) => {
+        CONTENT.education[currentRegion].map((item) => {
           return (
             <Card
               title={item.course}
@@ -41,9 +42,9 @@ import Card from "../CardCV.astro";
         })
       }
   </AccordionLayout>
-  <AccordionLayout title={"Certifications"} icon={"carbon:certificate"}>
+  <AccordionLayout title={CONTENT.titles[currentRegion].certificates} icon={"carbon:certificate"}>
       {
-        CONTENT.certificates.map((item) => {
+        CONTENT.certificates[currentRegion].map((item) => {
           return (
             <Card
               title={item.title}
@@ -57,9 +58,9 @@ import Card from "../CardCV.astro";
         })
       }
   </AccordionLayout>
-  <AccordionLayout title={"Languagues"} icon={"mdi:book"}>
+  <AccordionLayout title={CONTENT.titles[currentRegion].languages} icon={"mdi:book"}>
       {
-        CONTENT.languages.map((item) => {
+        CONTENT.languages[currentRegion].map((item) => {
           return (
             <Card
               title={item.level}
@@ -73,9 +74,9 @@ import Card from "../CardCV.astro";
         })
       }
   </AccordionLayout>
-  <AccordionLayout title={"Projects"} icon={"ion:md-build"}>
+  <AccordionLayout title={CONTENT.titles[currentRegion].projects} icon={"ion:md-build"}>
     {
-      CONTENT.projects.map((item) => {
+      CONTENT.projects[currentRegion].map((item) => {
         return (
           <Card
             title={item.title}
@@ -89,9 +90,9 @@ import Card from "../CardCV.astro";
       })
     }
   </AccordionLayout>
-  <AccordionLayout title={"Contact"} icon={"ri:contacts-book-fill"}>
+  <AccordionLayout title={CONTENT.titles[currentRegion].contact} icon={"ri:contacts-book-fill"}>
       {
-        CONTENT.contact.map((item) => {
+        CONTENT.contact[currentRegion].map((item) => {
           return (
             <Card
               title={""}

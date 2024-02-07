@@ -1,6 +1,6 @@
 MIT License
 
-Copyright (c) 2023 Utkarsh Singh Khokhar
+Copyright (c) 2023 Marcos Cuesta Abanades
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

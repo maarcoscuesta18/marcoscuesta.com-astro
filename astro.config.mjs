@@ -8,5 +8,9 @@ export default defineConfig({
   output: 'server',
   adapter: vercel({
     analytics: true,
-  })
+  }),
+  i18n: {
+    defaultLocale: "en",
+    locales: ["en", "es"],
+  },
 });
