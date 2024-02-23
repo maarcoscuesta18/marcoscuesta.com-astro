@@ -1,0 +1,19 @@
+---
+import IndexLayout from '../../layouts/indexLayout.astro';
+const allPosts = await Astro.glob('../posts/*.md');
+const tags = [...new Set(allPosts.map((post) => post.frontmatter.tags).flat())];
+const pageTitle = "Tags";
+---
+<IndexLayout title={pageTitle} languague="en">
+  <div class="tags mx-auto max-w-3xl">
+    <h2 class="text-2xl font-bold text-center p-5">{pageTitle}</h2>
+    <div class="flex flex-wrap justify-center gap-4 p-5">
+        {tags.map((tag) => (
+            <a href={`/tags/${tag}`} class="bg-[--accent-light] hover:bg-[--accent-regular] text-[--accent-dark] font-semibold py-2 px-4 rounded-full transition duration-300 ease-in-out transform hover:-translate-y-1 hover:scale-110">
+                {tag}
+            </a>
+        ))}
+    </div>
+</div>
+
+</IndexLayout>

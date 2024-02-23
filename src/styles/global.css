@@ -1,5 +1,6 @@
 *::-webkit-scrollbar {display:none;}
-*{scroll-behavior: smooth;}
+*{scroll-behavior: smooth;
+margin: 0 auto;}
 
 /* For webkit-based browsers */
 .overflow-y-scroll::-webkit-scrollbar {
@@ -13,7 +14,7 @@
 	scrollbar-width: 1px;
 }
 /* Global variables */
-:root {
+:root, :root[data-theme="light"] {
 	/* Colors */
 	--gray-0: #090b11;
 	--gray-50: #141925;
@@ -87,7 +88,7 @@
 	--theme-transition: 0.2s ease-in-out;
 }
 
-:root.theme-dark {
+:root[data-theme="dark"] {
 	--gray-0: #ffffff;
 	--gray-50: #f3f4f7;
 	--gray-100: #e3e6ee;
@@ -130,7 +131,7 @@
 }
 
 html,body {
-	height: 100%;
+	height: fit-content !important;
 	overflow-x: hidden;
 }
 

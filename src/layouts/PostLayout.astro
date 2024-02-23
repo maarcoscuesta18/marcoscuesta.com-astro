@@ -1,0 +1,31 @@
+---
+import IndexLayout from "../layouts/indexLayout.astro";
+
+const { frontmatter } = Astro.props;
+---
+<IndexLayout title={frontmatter.title} description={frontmatter.description} languague="en">
+    <div class="w-full max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-justify">
+            <div class="text-center">
+                <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl m-3">{frontmatter.title}</h2>
+                <div class="flex flex-wrap justify-center items-center text-sm">
+                    <p>By {frontmatter.author} · Published on {frontmatter.date.slice(0,10)} · Tags:</p>
+                    {frontmatter.tags.map((tag) => (
+                        <p class="tag mx-1"><a href={`/tags/${tag}`} class="inline-block px-2 py-1 text-sm font-semibold ">{tag}</a></p>
+                    ))}
+                </div>    
+            </div>
+            <div class="mt-5">
+                <img class="object-cover w-full h-auto"
+                    src={frontmatter.titleimage.url} 
+                    alt={frontmatter.titleimage.alt}
+                    />
+            </div>
+            <article class="mt-5">
+                <slot />
+            </article>
+        </div>
+    </div>
+    
+</IndexLayout>
+

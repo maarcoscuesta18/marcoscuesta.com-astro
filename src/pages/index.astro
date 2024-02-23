@@ -3,12 +3,15 @@ import Container from "../components/CV/ContainerCV.astro";
 import Header from "../components/CV/HeaderCV.astro";
 import IndexLayout from "../layouts/indexLayout.astro";
 ---
-<IndexLayout>
+<IndexLayout 
+	title="Marcos Cuesta: Personal Site"
+	description="The personal site of Marcos Cuesta"
+	languague="en">
 	<Header />
 	<article class="mx-auto h-fit max-w-3xl w-[95vw] flex flex-nowrap ">
-		<div class="bg-red-700 hover:scale-x-[2] w-full h-1.5" id="one"></div>
+		<div class="bg-red-700  w-full h-1.5" id="one"></div>
 		<div class="bg-yellow-500 hover:scale-x-[2] w-full h-1.5" id="two"></div>
-		<div class="bg-red-700 hover:scale-x-[2] w-full h-1.5" id="three"></div>
+		<div class="bg-red-700  w-full h-1.5" id="three"></div>
 	</article>
 	<main class="mx-auto flex-grow max-h-[90vh] md:max-h-[70vh] max-w-3xl overflow-y-scroll grid gap-5 p-5 w-[95vw] stack">
 		<Container currentRegion="en"/>

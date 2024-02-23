@@ -1,9 +1,15 @@
 ---
 import * as CONTENT from "../../pages/content.js"
+import Icon from "../Icon/Icon.astro";
+import type { iconPaths } from '../Icon/IconPaths';
+const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[] = [
+	{ label: 'GitHub', href: 'https://github.com/maarcoscuesta18', icon: 'github-logo' },
+	{ label: 'Linkedin', href: 'https://www.linkedin.com/in/marcos-cuesta-abanades/', icon: 'linkedin-logo' },
+];
 ---
 
 <!-- Hero section -->
-<header class="mx-auto  max-w-2xl py-8">
+<header class="mx-auto max-w-2xl py-8">
   <article class="grid grid-cols-1 md:grid-cols-3 grid-rows-1 place-items-center w-[98vw] max-w-2xl">
     <div class="rounded-full border-primary self-end shadow-2xl md:w-24 w-20 aspect-square">
       <img
@@ -19,14 +25,40 @@ import * as CONTENT from "../../pages/content.js"
       <h5 class="text-sm ">{CONTENT.location}</h5>
     </div>
 
-    <div class="md:grid text-right self-end hidden">
-      <h6 class="text-sm ">{CONTENT.pronouns}</h6>
-      <a
-        href={CONTENT.website}
-        target="_blank"
-        class="hover:text-blue-300 flex items-center justify-center">
-        {CONTENT.website}
-      </a>
+    <div class="md:grid text-right self-end">
+      <div class="flex items-center pb-1">
+				{
+					iconLinks.map(({ href, icon, label }) => (
+						<a href={href} class="social" target="_blank">
+							<span class="sr-only">{label}</span>
+							<Icon icon={icon} size="25px"/>
+						</a>
+					))
+				}
+			</div>
     </div>
   </article>
 </header>
+<style>
+  .socials {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		gap: 0.625rem;
+		font-size: var(--icon-size);
+	}
+
+	.social {
+		display: flex;
+		padding: var(--icon-padding);
+		text-decoration: none;
+		color: var(--accent-regular);
+		transition: color var(--theme-transition);
+	}
+
+	.social:hover,
+	.social:focus {
+		color: var(--accent-dark);
+	}
+
+</style>

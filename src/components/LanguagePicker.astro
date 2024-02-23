@@ -1,0 +1,48 @@
+---
+const path = Astro.url.href;
+console.log(path);
+
+---
+<div class="relative inline-block">
+  <div>
+      <button id="dropdownToggle" type="button" class="px-4 py-1 rounded-lg focus:outline-none focus:ring  focus:ring-opacity-50">
+          <div class="flex items-center justify-between">
+              <svg class="h-5 w-5 mr-2" viewBox="0 0 24 24" role="img" xmlns="http://www.w3.org/2000/svg" aria-labelledby="languageIconTitle" stroke="#0185b2" stroke-width="0.672" fill="none" color="#000000"><title id="languageIconTitle">Language</title><circle cx="12" cy="12" r="10"></circle><path d="M12,22 C14.6666667,19.5757576 16,16.2424242 16,12 C16,7.75757576 14.6666667,4.42424242 12,2 C9.33333333,4.42424242 8,7.75757576 8,12 C8,16.2424242 9.33333333,19.5757576 12,22 Z"></path><path d="M2.5 9L21.5 9M2.5 15L21.5 15"></path></svg>
+              <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" /></svg>
+          </div>
+      </button>
+  </div>
+
+  <div id="dropdownContent" class="hidden origin-top-right absolute right-0 mt-2  rounded-md shadow-lg bg-[--accent-overlay] ring-1  ring-opacity-5 z-50">
+      <div class="py-1">
+          <a href={"/"} class="cursor-pointer block px-4 py-2 text-sm " title="English">🇺🇸 English</a>
+          <a href={"/es"} class="cursor-pointer block px-4 py-2 text-sm " title="Español">🇪🇸 Spanish</a>
+      </div>
+  </div>
+</div>
+  
+<script type="module">
+  const dropdownToggle = document.getElementById('dropdownToggle');
+  const dropdownContent = document.getElementById('dropdownContent');
+
+  dropdownToggle.addEventListener('click', () => {
+    dropdownContent.classList.toggle('hidden');
+  });
+
+  // Hide dropdownContent when clicking outside
+  document.addEventListener('click', function(e) {
+    if (!dropdownToggle.contains(e.target) && !dropdownContent.contains(e.target)) {
+      dropdownContent.classList.add('hidden');
+    }
+  });
+</script>
+
+<style>
+  @media screen and (max-width: 768px) { /* Adjust based on your breakpoint */
+  #dropdownContent {
+    right: auto; /* Reset right alignment */
+    left: 0; /* Align to the left on smaller screens */
+    width: 100%; /* Optional: make it full width on smaller screens */
+  }
+}
+</style>

@@ -1,0 +1,31 @@
+---
+import IndexLayout from '../layouts/indexLayout.astro'
+const allPosts = await Astro.glob('./posts/*.md');
+const pageTitle = "Newsletter - The Coding Blog";
+---
+<IndexLayout title={pageTitle} languague="en">
+<div class="w-full max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+  <div class="text-justify">
+    <h1 class="text-center text-2xl sm:text-3xl md:text-4xl font-bold my-4">Newsletter</h1>
+    {allPosts.map((post) => 
+      <a href={post.url}>
+        <div class="w-full py-4 md:py-8 space-y-4 md:space-y-6">
+          <div class="space-y-2">
+            <h2 class="text-2xl sm:text-3xl font-bold tracking-tight">{post.frontmatter.title}</h2>
+            <p>Posted on {post.frontmatter.date.slice(0,10)}</p>
+            <div class="tags flex flex-wrap -mx-1">Tags: 
+                    {post.frontmatter.tags.map((tag) => (
+                      <p class="tag mx-1 px-2 rounded-full"><a href={`/tags/${tag}`}>{tag}</a></p>
+                    ))}
+            </div>
+          </div>
+          <p>{post.frontmatter.description}</p>
+          <a class="font-semibold underline" href={post.url}>Read More</a>
+        </div>
+        <div class="border-t " />
+      </a>
+    )}
+  </div>
+</div>
+
+</IndexLayout>

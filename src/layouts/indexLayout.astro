@@ -3,14 +3,14 @@ import MainHead from '../components/MainHead.astro';
 import Navigation from "../components/Navigation.astro";
 import Footer from "../components/Footer.astro";
 import '../styles/global.css';
-const {languague} = Astro.props;
+const {languague,title,description} = Astro.props;
 ---
-<html lang={languague}>
-	<head>
-		<MainHead />
+<html lang={languague} class="min-h-full">
+	<head >
+		<MainHead title={title} description={description} />
 	</head>
-	<body class="backgrounds">
-		<Navigation />
+	<body class="backgrounds ">
+		<Navigation lang={languague} />
 		<slot/>
 		<Footer />
 <script>
@@ -19,7 +19,7 @@ const {languague} = Astro.props;
 </script>
 
 <style>
-	:root {
+	:root, :root[data-theme="light"] {
 		--_placeholder-bg: linear-gradient(transparent, transparent);
 		--bg-image-main: url('/assets/backgrounds/bg-subtle-1-light-1440w.jpg');
 		--bg-image-main-curves: url('/assets/backgrounds/bg-main-light.svg');
@@ -34,7 +34,7 @@ const {languague} = Astro.props;
 		--bg-gradient-size: calc(var(--bg-scale) * 100%);
 	}
 
-	:root.theme-dark {
+	:root[data-theme="dark"] {
 		--bg-image-main: url('/assets/backgrounds/bg-subtle-1-dark-1440w.jpg');
 		--bg-image-main-curves: url('/assets/backgrounds/bg-main-dark.svg');
 		--bg-svg-blend-mode: darken;
@@ -43,37 +43,38 @@ const {languague} = Astro.props;
 
 	/* These backgrounds are displayed below the fold, so we lazy load them
 	   once the `.loaded` class has been set.  */
-	:root.loaded {
+	:root.loaded, :root.loaded[data-theme="light"] {
 		--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-light-800w.jpg');
 		--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-light-800w.jpg');
 		--bg-image-footer: url('/assets/backgrounds/bg-footer-light-800w.jpg');
 	}
-	:root.loaded.theme-dark {
+	:root.loaded[data-theme="dark"] {
 		--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-dark-800w.jpg');
 		--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-dark-800w.jpg');
 		--bg-image-footer: url('/assets/backgrounds/bg-footer-dark-800w.jpg');
 	}
 
 	@media (min-width: 50em) {
-		:root {
+		:root, :root[data-theme="light"]{
 			--bg-scale: 1;
 			--bg-image-main: url('/assets/backgrounds/bg-subtle-1-light-1440w.jpg');
 		}
-		:root.theme-dark {
+		:root[data-theme="dark"] {
 			--bg-image-main: url('/assets/backgrounds/bg-subtle-1-dark-1440w.jpg');
 		}
 
-		:root.loaded {
+		:root.loaded, :root.loaded[data-theme="light"] {
 			--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-light-1440w.jpg');
 			--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-light-1440w.jpg');
 			--bg-image-footer: url('/assets/backgrounds/bg-footer-light-1440w.jpg');
 		}
-		:root.loaded.theme-dark {
+		:root.loaded[data-theme="dark"] {
 			--bg-image-subtle-1: url('/assets/backgrounds/bg-subtle-1-dark-1440w.jpg');
 			--bg-image-subtle-2: url('/assets/backgrounds/bg-subtle-2-dark-1440w.jpg');
 			--bg-image-footer: url('/assets/backgrounds/bg-footer-dark-1440w.jpg');
 		}
 	}
+
 </style>
 </body>
 </html>

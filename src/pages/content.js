@@ -28,12 +28,12 @@ export const titles = {
 }
 // About
 export const about = {
-	"en": "Developer with 2 years of experience in the development of RPA processes under the UiPath environment based on .NET, C# and VB,"+ 
+	"en": "RPA Engineer with "+(new Date().getFullYear()-2021).toString()+  " years of experience in the development of RPA processes based on .NET, C# and VB.NET, "+ 
 	"with knowledge in other programming languages such as Java, and Python. Passionate about technology and innovation specially in "+
-	"the field of web development and automated RPA processes.",
-	"es":"Desarrollador con 2 años de experiencia en el desarrollo de procesos RPA bajo el entorno UiPath basado en .NET, C# y VB," + 
+	"the fields of Web development, Backend development and Mobile Development.",
+	"es":"Desarrollador con 2 años de experiencia en el desarrollo de procesos RPA basados en .NET, C# y VB.NET," + 
 	"con conocimientos en otros lenguajes de programación como Java y Python. Apasionado por la tecnología e innovación especialmente en " +
-	"el campo del desarrollo web y procesos RPA automatizados."
+	"los campos del desarrollo web, desarrollo backend y desarrollo móvil."
 }
 
 
@@ -49,11 +49,9 @@ export const work = {
 		location: "Madrid, Spain",
 		skills: `Engineer on the RPA team:
 		• Design and develop automated workflows to optimize business operations making a significant impact on people's
-		lives by automating more than 25+ processes.
-		• Design of Process Design Documents (PDDs) and Solution Design Documents (SDDs) to outline the automation
-		strategy and technical requirements.
-		• Develop and design test cases to validate the functionality of the automated processes.
-		• Monitoring and maintenance deployed RPA solutions to ensure they are functioning as intended.Visual Basic .NET (VB.NET) · C# · Robotic Process Automation (RPA) · UiPath`
+		lives by automating more than 50+ processes saving hundred of hours in manual work and money.
+		• Gathering and documenting requirements, providing clarity and direction during the development and implementation phases.
+		• Monitoring and maintenance deployed RPA solutions to ensure they are functioning as intended. Visual Basic .NET (VB.NET) · C# · Robotic Process Automation (RPA) · UiPath`
 	},
 	{
 		from: "June 2021",
@@ -73,15 +71,15 @@ export const work = {
 			org: "NTT Data",
 			org_url: "https://nttdata.com",
 			location: "Madrid, Spain",
-			skills: `Engineer en el dinámico equipo de RPA, asumiendo un papel fundamental
+			skills: `Engineer en el equipo de RPA, asumiendo un papel fundamental
 			ejecutando y liderando en áreas clave:
 			junio 2021 – Presente
-			• Diseño y desarrollo de procesos y evolutivos RPA, optimizando flujos de trabajo y elevando la eficiencia
-			operativa con una implementación continua en más de 20 procesos.
+			• Diseño y desarrollo de procesos RPA, optimizando flujos de trabajo y elevando la eficiencia
+			operativa con una implementación continua en más de 50 procesos ahorrando horas de trabajo manual y costes.
 			• Levantamiento y toma de requerimientos proporcionando claridad y dirección durante las fases de
 			desarrollo e implementación.
 			• Mantenimiento continuo y mejoras en los procesos existentes asegurando un rendimiento óptimo y la
-			satisfacción del usuario final`
+			satisfacción de los usuarios.`
 		},
 		{
 			from: "June 2021",
@@ -284,7 +282,7 @@ export const languages = {
 		},
 		{
 			language: "Inglés",
-			level: "B2"
+			level: "Profesional"
 		}
 	]
 }
