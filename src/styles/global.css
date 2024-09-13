@@ -31,8 +31,8 @@ margin: 0 auto;}
 	--gray-999_40: hsla(var(--gray-999-basis), 0.4);
 	--gray-999: #ffffff;
 
-	--accent-light: #DFF6FF;
-	--accent-regular: #5D8BF4;
+	--accent-light: #d1e8fc;
+	--accent-regular: #4e7deb;
 	--accent-dark: #051367;
 	--accent-overlay: hsla(216, 89%, 67%, 0.33);
 	--accent-subtle-overlay: var(--accent-overlay);
@@ -104,8 +104,8 @@ margin: 0 auto;}
 	--gray-999: #090b11;
 
 	--accent-light: #051367;
-	--accent-regular: #5D8BF4;
-	--accent-dark: #DFF6FF;
+	--accent-regular: #4e7deb;
+	--accent-dark: #d1e8fc;
 	--accent-overlay: hsla(216, 89%, 67%, 0.33);
 	--accent-subtle-overlay: hsla(217, 81%, 36%, 0.33);
 	--accent-text-over: var(--gray-0);

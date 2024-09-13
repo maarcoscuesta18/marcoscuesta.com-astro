@@ -4,7 +4,7 @@ import IndexLayout from "../layouts/indexLayout.astro";
 const { frontmatter } = Astro.props;
 ---
 <IndexLayout title={frontmatter.title} description={frontmatter.description} languague="en">
-    <div class="w-full max-w-2xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="text-justify">
             <div class="text-center">
                 <h2 class="text-lg sm:text-xl md:text-2xl lg:text-3xl m-3">{frontmatter.title}</h2>
@@ -15,8 +15,8 @@ const { frontmatter } = Astro.props;
                     ))}
                 </div>    
             </div>
-            <div class="mt-5">
-                <img class="object-cover w-full h-auto"
+            <div class="mt-5 flex justify-center align-middle">
+                <img class="object-cover w-full h-auto "
                     src={frontmatter.titleimage.url} 
                     alt={frontmatter.titleimage.alt}
                     />
