@@ -7,7 +7,7 @@ author: 'Marcos Cuesta'
 titleimage:
     url: 'https://i.gyazo.com/3c773f2b93799409be99e14dc618f413.png'
     alt: 'App screenshot.'
-tags: ["AI", "C#", "WinUI 3", ".NET", "OpenAI"]
+tags: ["AI", "C-Sharp", "WinUI 3", ".NET", "OpenAI"]
 ---
 
 ##### Introducing Luminary AI
