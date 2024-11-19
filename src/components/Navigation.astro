@@ -256,7 +256,6 @@ const textLinks: { label: string; href: string }[] = [
 		list-style: none;
 		padding: 2rem;
 		background-color: var(--gray-999);
-		border-bottom: 1px solid var(--gray-800);
 	}
 
 	.link {
@@ -313,18 +312,13 @@ const textLinks: { label: string; href: string }[] = [
 			position: relative;
 			flex-direction: row;
 			font-size: var(--text-sm);
-			border-radius: 999rem;
-			border: 0;
 			padding: 0.5rem 0.5625rem;
-			background: radial-gradient(var(--gray-900), var(--accent-light) 150%);
-			box-shadow: var(--shadow-md);
 		}
 
 		.nav-items::before {
 			position: absolute;
 			inset: -1px;
 			content: '';
-			background: var(--accent-regular);
 			border-radius: 999rem;
 			z-index: -1;
 		}
@@ -338,7 +332,7 @@ const textLinks: { label: string; href: string }[] = [
 		.link:hover,
 		.link:focus {
 			color: var(--gray-100);
-			background-color: var(--accent-subtle-overlay);
+			background-color: var(--gray-800);
 		}
 
 		.link.active {
