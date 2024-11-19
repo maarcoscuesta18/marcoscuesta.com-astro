@@ -26,22 +26,22 @@ const {currentRegion} = Astro.props;
         })
       }
   </AccordionLayout>
-  <AccordionLayout title={CONTENT.titles[currentRegion].education} icon={"carbon:education"}>
-      {
-        CONTENT.education[currentRegion].map((item) => {
-          return (
-            <Card
-              title={item.course}
-              timeframe={`${item.from} - ${item.to}`}
-              description={item.location}
-              tags={""}
-              url={"#"}
-              url_name={item.institute}
-            />
-          );
-        })
-      }
-  </AccordionLayout>
+  <AccordionLayout title={CONTENT.titles[currentRegion].projects} icon={"ion:md-build"}>
+    {
+      CONTENT.projects[currentRegion].map((item) => {
+        return (
+          <Card
+            title={item.title}
+            timeframe="2022-2023"
+            description={item.description}
+            tags={item.tech}
+            url={item.url}
+            url_name={"Open Project"}
+          />
+        );
+      })
+    }
+  </AccordionLayout>  
   <AccordionLayout title={CONTENT.titles[currentRegion].certificates} icon={"carbon:certificate"}>
       {
         CONTENT.certificates[currentRegion].map((item) => {
@@ -58,6 +58,22 @@ const {currentRegion} = Astro.props;
         })
       }
   </AccordionLayout>
+  <AccordionLayout title={CONTENT.titles[currentRegion].education} icon={"carbon:education"}>
+      {
+        CONTENT.education[currentRegion].map((item) => {
+          return (
+            <Card
+              title={item.course}
+              timeframe={`${item.from} - ${item.to}`}
+              description={item.location}
+              tags={""}
+              url={"#"}
+              url_name={item.institute}
+            />
+          );
+        })
+      }
+  </AccordionLayout>  
   <AccordionLayout title={CONTENT.titles[currentRegion].languages} icon={"mdi:book"}>
       {
         CONTENT.languages[currentRegion].map((item) => {
@@ -73,22 +89,6 @@ const {currentRegion} = Astro.props;
           );
         })
       }
-  </AccordionLayout>
-  <AccordionLayout title={CONTENT.titles[currentRegion].projects} icon={"ion:md-build"}>
-    {
-      CONTENT.projects[currentRegion].map((item) => {
-        return (
-          <Card
-            title={item.title}
-            timeframe="2022-2023"
-            description={item.description}
-            tags={item.tech}
-            url={item.url}
-            url_name={"Open Project"}
-          />
-        );
-      })
-    }
   </AccordionLayout>
   <AccordionLayout title={CONTENT.titles[currentRegion].contact} icon={"ri:contacts-book-fill"}>
       {
