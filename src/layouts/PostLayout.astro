@@ -16,7 +16,7 @@ const { frontmatter } = Astro.props;
                 </div>    
             </div>
             <div class="mt-5 flex justify-center align-middle">
-                <img class="object-cover w-full h-auto "
+                <img class="object-cover w-full h-64 sm:h-96 md:h-128 lg:h-144"
                     src={frontmatter.titleimage.url} 
                     alt={frontmatter.titleimage.alt}
                     />
@@ -26,6 +26,7 @@ const { frontmatter } = Astro.props;
             </article>
         </div>
     </div>
-    
 </IndexLayout>
+<style>
+ 
 
