@@ -170,19 +170,19 @@ export const education = {
 export const contact = {
     en: [
         {
-            source_name: "Send me a email",
-            source: "mailto:contact@marcoscuesta.com",
+            source_name: "marcos@marcoscuesta.com",
+            source: "mailto:marcos@marcoscuesta.com",
             title: "Email",
             source_icon: "email-svgrepo-com.svg",
         },
         {
-            source_name: "Go to github",
+            source_name: "maarcoscuesta18",
             source: "https://github.com/maarcoscuesta18",
             title: "Github",
             source_icon: "github-mark-white.svg",
         },
         {
-            source_name: "Go to LinkedIn",
+            source_name: "LinkedIn",
             source: "https://www.linkedin.com/in/marcos-cuesta-abanades",
             title: "LinkedIn",
             source_icon: "LinkedIn-Icon-Logo.wine.svg",
@@ -190,19 +190,19 @@ export const contact = {
     ],
     es: [
         {
-            source_name: "Envíame un correo",
-            source: "mailto:contact@marcoscuesta.com",
+            source_name: "marcos@marcoscuesta.com",
+            source: "mailto:marcos@marcoscuesta.com",
             title: "Correo",
             source_icon: "email-svgrepo-com.svg",
         },
         {
-            source_name: "Ir a Github",
+            source_name: "maarcoscuesta18",
             source: "https://github.com/maarcoscuesta18",
             title: "Github",
             source_icon: "github-mark-white.svg",
         },
         {
-            source_name: "Ir a LinkedIn",
+            source_name: "LinkedIn",
             source: "https://www.linkedin.com/in/marcos-cuesta-abanades",
             title: "LinkedIn",
             source_icon: "LinkedIn-Icon-Logo.wine.svg",
