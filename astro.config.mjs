@@ -1,18 +1,19 @@
-import { defineConfig } from 'astro/config';
+import { defineConfig } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import vercel from '@astrojs/vercel/serverless';
+import vercel from "@astrojs/vercel/serverless";
 import alpinejs from "@astrojs/alpinejs";
 
-// https://astro.build/config
 export default defineConfig({
-  integrations: [tailwind(), alpinejs()],
-  output: 'server',
-  adapter: vercel({
-    analytics: true,
-  }),
-  i18n: {
-    defaultLocale: "en",
-    locales: ["en", "es"],
-    
-  },
+    integrations: [tailwind(), alpinejs()],
+    output: "server",
+    adapter: vercel({
+        analytics: true,
+        webAnalytics: {
+            enabled: true,
+        },
+    }),
+    i18n: {
+        defaultLocale: "en",
+        locales: ["en", "es"],
+    },
 });
