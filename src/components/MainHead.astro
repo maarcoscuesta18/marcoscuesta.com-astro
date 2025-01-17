@@ -1,6 +1,7 @@
 ---
 import { ViewTransitions } from 'astro:transitions';
-
+import  SpeedInsights  from "@vercel/speed-insights/astro"
+import Analytics from '@vercel/analytics/astro'
 interface Props {
 	title?: string | undefined;
 	description?: string | undefined;
@@ -25,7 +26,8 @@ const {description,title} = Astro.props;
 <title>{title}</title>
 <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 <ViewTransitions/>
-
+<Analytics />
+<SpeedInsights />
 <script>
 	const themeToggles = document.querySelectorAll("[data-theme-toggle]");
 
