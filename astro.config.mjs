@@ -9,7 +9,7 @@ export default defineConfig({
     adapter: vercel({
         analytics: true,
         webAnalytics: {
-            enabled: true,
+            enabled: false,
         },
     }),
     i18n: {
