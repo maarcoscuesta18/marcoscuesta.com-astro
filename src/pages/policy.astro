@@ -1,24 +1,161 @@
 ---
 import IndexLayout from "../layouts/indexLayout.astro";
-
 ---
-<IndexLayout languague="en"> 
-    <div class="min-h-screen font-bold" id="about">
-        <h1 class="text-6xl font-extrabold text-center">Privacy policy</h1>
-        <div class="container mx-auto m-10">
-            <div class="container mx-auto m-10 text-justify">
-                <p class="m-5">Privacy Policy of IberiaEye.<br> Effective date: {new Date().toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-                <p class="m-5"><span class="text-2xl bold">Introduction:</span> <br>Welcome to IberiaEye, your essential road assistant for the roads of Spain. We are committed to protecting your privacy and handling your data transparently and responsibly. This Privacy Policy details how we treat your information and what rights you have in this regard.</p>
-                <p class="m-5"><span class="text-2xl bold">Data we collect:</span> <br>IberiaEye does not collect any personal data from its users. The application only requires internet permissions for optimal operation.</p>
-                <p class="m-5"><span class="text-2xl bold">Use of information:</span> <br>Although we do not collect personal data, we use Firebase to analyze the performance of the application and continuously improve its functionality and user experience. These analyses are based on anonymous and aggregated data and cannot be used to identify individual users.</p>
-                <p class="m-5"><span class="text-2xl bold">Data sharing:</span> <br>We do not share, sell, or disclose your personal information to third parties, as we do not collect such information.</p>
-                <p class="m-5"><span class="text-2xl bold">Data security:</span> <br>Although we do not collect personal data, we prioritize security and take appropriate measures to protect the integrity and security of any information within the application.</p>
-                <p class="m-5"><span class="text-2xl bold">User rights:</span> <br>Since we do not collect personal data, you don't need to worry about your rights to access, rectification, deletion, etc. However, we value your feedback and questions about the application and its operation. You can contact us at any time through contact@marcoscuesta.com.</p>
-                <p class="m-5">Changes to the Privacy Policy: We may occasionally update this Privacy Policy to reflect changes in our application or for other operational, legal, or regulatory reasons. If we make changes, we will notify you through an application update or other appropriate means.</p>
-                <p class="m-5"><span class="text-2xl bold">Contact:</span> <br>If you have questions or concerns about this Privacy Policy, please do not hesitate to contact us at contact@marcoscuesta.com.</p>
-                <p class="m-5">Thank you for trusting IberiaEye and allowing us to be your eyes on the road.</p>               
-            </div>
-        </div>
-    </div>                
-</IndexLayout>
 
+<IndexLayout languague="en">
+  <div class="min-h-screen bg-gray-50 py-12 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-4xl mx-auto bg-white rounded-lg shadow-lg overflow-hidden">
+      <div class="px-6 py-8 md:p-10">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-center text-gray-900 mb-8">
+          Privacy Policy
+        </h1>
+        
+        <div class="text-sm text-gray-500 mb-8 text-right">
+          Effective date: {new Date().toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' })}
+        </div>
+        
+        <div class="space-y-6 text-gray-700">
+          <section>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Introduction</h2>
+            <p class="leading-relaxed">
+              Welcome to IberiaEye, your essential road assistant for Spanish roads. 
+              We are committed to protecting your privacy and handling your data in a 
+              transparent and responsible manner. This Privacy Policy details how we 
+              treat your information and what your rights are regarding it.
+            </p>
+          </section>
+          
+          <section>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Data We Collect and Permissions Used</h2>
+            <p class="leading-relaxed mb-3">
+              To improve user experience and provide key features, 
+              IberiaEye requires and may use the following permissions and data:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li class="leading-relaxed">
+                <span class="font-semibold">Internet access and network state (INTERNET, ACCESS_NETWORK_STATE):</span> 
+                Necessary to obtain real-time information about traffic, 
+                road conditions, and app updates.
+              </li>
+              <li class="leading-relaxed">
+                <span class="font-semibold">Precise and approximate location (ACCESS_FINE_LOCATION, ACCESS_COARSE_LOCATION):</span> 
+                Allows us to locate your exact position to provide relevant information 
+                about your immediate road environment.
+              </li>
+              <li class="leading-relaxed">
+                <span class="font-semibold">Background location (ACCESS_BACKGROUND_LOCATION):</span> 
+                The application can access your location even when not actively in use, 
+                to provide real-time alerts about traffic conditions, 
+                road hazards, and personalized updates.
+              </li>
+              <li class="leading-relaxed">
+                <span class="font-semibold">Notifications (POST_NOTIFICATIONS):</span> 
+                Allows sending important alerts and relevant updates to your device.
+              </li>
+              <li class="leading-relaxed">
+                <span class="font-semibold">Foreground service (FOREGROUND_SERVICE, FOREGROUND_SERVICE_LOCATION):</span> 
+                Allows the application to run essential processes while minimized, 
+                such as continuous location monitoring for traffic alerts.
+              </li>
+              <li class="leading-relaxed">
+                <span class="font-semibold">Usage analytics:</span> 
+                We use Firebase to collect anonymous data about app performance 
+                and improve the user experience.
+              </li>
+            </ul>
+          </section>
+          
+          <section>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Use of Information</h2>
+            <p class="leading-relaxed mb-3">
+              The collected data is used to:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li class="leading-relaxed">
+                Display real-time information about traffic and road conditions.
+              </li>
+              <li class="leading-relaxed">
+                Improve app functionality and performance.
+              </li>
+              <li class="leading-relaxed">
+                Ensure a personalized and efficient user experience.
+              </li>
+            </ul>
+            <p class="leading-relaxed mt-3 font-semibold">
+              IberiaEye does not sell, share, or use data for advertising purposes.
+            </p>
+          </section>
+          
+          <section>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Prominent Disclosure and Consent</h2>
+            <p class="leading-relaxed mb-3">
+              <span class="font-semibold">Background Location Usage:</span> 
+              Before accessing background location, IberiaEye will display 
+              a clear and explicit notice within the app, explaining the 
+              reason for the request. Location will only be collected if the user 
+              expressly grants permission.
+            </p>
+            <p class="leading-relaxed">
+              Additionally, users can manage location permissions at any time 
+              from their device settings.
+            </p>
+          </section>
+          
+          <section>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Data Security</h2>
+            <p class="leading-relaxed">
+              We take security seriously and apply appropriate measures to 
+              protect collected data against unauthorized access, alterations, 
+              or disclosures.
+            </p>
+          </section>
+          
+          <section>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">User Rights</h2>
+            <p class="leading-relaxed mb-3">
+              As a user, you have the following rights:
+            </p>
+            <ul class="list-disc pl-6 space-y-2">
+              <li class="leading-relaxed">
+                Access, correct, or delete collected data.
+              </li>
+              <li class="leading-relaxed">
+                Revoke location permission at any time from device settings.
+              </li>
+              <li class="leading-relaxed">
+                Contact us if you have privacy concerns.
+              </li>
+            </ul>
+          </section>
+          
+          <section>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Changes to the Privacy Policy</h2>
+            <p class="leading-relaxed">
+              We may update this Privacy Policy occasionally to reflect 
+              changes in our application or for other operational, legal, or 
+              regulatory reasons. If we make changes, we will notify you through an 
+              application update or other appropriate means.
+            </p>
+          </section>
+          
+          <section>
+            <h2 class="text-2xl font-bold text-gray-900 mb-3">Contact</h2>
+            <p class="leading-relaxed">
+              If you have questions or concerns about this Privacy Policy, 
+              please don't hesitate to contact us at 
+              <a href="mailto:contact@marcoscuesta.com" class="text-blue-600 hover:text-blue-800 underline">
+                contact@marcoscuesta.com
+              </a>.
+            </p>
+          </section>
+          
+          <div class="border-t border-gray-200 pt-6 mt-6">
+            <p class="font-bold text-center text-gray-900">
+              Thank you for trusting IberiaEye and allowing us to be your eyes on the road.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</IndexLayout>
