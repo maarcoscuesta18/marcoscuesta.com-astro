@@ -31,29 +31,53 @@ export const about = {
     en:
         "Software Engineer with " +
         (new Date().getFullYear() - 2021).toString() +
-        " years of experience in the development of RPA processes based on .NET Framework and VB.NET Platform. Passionate about technology and innovation specially in " +
+        " years of experience in software development based on .NET Framework. Passionate about technology and innovation specially in " +
         "the fields of Web development, Backend development and Mobile Development.",
     es:
         "Ingeniero de software con " +
         (new Date().getFullYear() - 2021).toString() +
-        " años de experiencia en el desarrollo de procesos RPA basados en la plataforma .NET y VB.NET. Apasionado por la tecnología y la innovación, especialmente en los campos del desarrollo web, desarrollo backend y desarrollo móvil.",
+        " años de experiencia en el desarrollo de software basados en la plataforma .NET. Apasionado por la tecnología y la innovación, especialmente en los campos del desarrollo web, desarrollo backend y desarrollo móvil.",
 };
 
 // Work Experience --> #work section
 export const work = {
     en: [
         {
-            from: "July 2023",
+            from: "June 2021",
             to: "Present",
             role: "Software Engineer",
             org: "NTT Data",
             org_url: "https://nttdata.com",
             location: "Madrid, Spain",
-            skills: `Software Engineer on the RPA team, taking on a key role executing and leading in key RPA areas. Stack:  Visual Basic .NET (VB.NET) · C# · Robotic Process Automation (RPA) · UiPath`,
+            skills: `Software Engineer in private banking and automation projects, contributing to CI/CD within banking ecosystems. 
+             Developed and maintained solutions in C# within Microsoft Dynamics. 
+             Led and optimized RPA processes, improving workflow efficiency and reducing costs.
+             Supported Junior Engineers to enhance team performance. 
+             Stack: C# · VB.NET · Microsoft Dynamics · Robotic Process Automation (RPA) · UiPath`,
+            projects: [
+                {
+                    name: "Private Banking (Spanish Project)",
+                    description: `Developed and maintained solutions in C# within Microsoft Dynamics. 
+                          Collaborated with cross-functional teams to enhance banking processes and optimize workflows. 
+                          Ensured secure and scalable banking solutions aligned with industry best practices.`,
+                },
+                {
+                    name: "RLUS (International Project)",
+                    description: `Automated manual processes, achieving cost and time savings across 20+ automations. 
+                          Reduced human effort costs by over €100,000 annually. 
+                          Led maintenance and optimization of existing processes for stability and efficiency.`,
+                },
+                {
+                    name: "Spanish Postal Service",
+                    description: `Led the design and development of RPA processes, enhancing efficiency across 20+ workflows. 
+                          Achieved significant labor cost reductions, saving over €50,000. 
+                          Ensured continuous maintenance and optimization for peak performance and user satisfaction.`,
+                },
+            ],
         },
         {
-            from: "June 2021",
-            to: "July 2023",
+            from: "Jun 2021",
+            to: "Jun 2022",
             role: "Junior Engineer",
             org: "NTT Data",
             org_url: "https://nttdata.com",
@@ -63,13 +87,37 @@ export const work = {
     ],
     es: [
         {
-            from: "July 2023",
-            to: "Present",
-            role: "Software Engineer",
+            from: "Junio 2021",
+            to: "Presente",
+            role: "Ingeniero de Software",
             org: "NTT Data",
             org_url: "https://nttdata.com",
-            location: "Madrid, Spain",
-            skills: `Ingeniero RPA en el equipo de IA, asumiendo un papel clave en la ejecución de las áreas clave de RPA.`,
+            location: "Madrid, España",
+            skills: `Ingeniero de Software en proyectos de banca privada y automatización, contribuyendo a la integración y desarrollo continuo de ecosistemas bancarios. 
+             Desarrollo y mantenimiento de soluciones en C# dentro de Microsoft Dynamics. 
+             Liderazgo y optimización de procesos RPA, mejorando la eficiencia operativa y reduciendo costos. 
+             Soporte a Ingenieros Junior para potenciar el rendimiento del equipo. 
+             Stack: C# · VB.NET · Microsoft Dynamics · Automatización Robótica de Procesos (RPA) · UiPath`,
+            projects: [
+                {
+                    name: "Banca Privada (Proyecto en España)",
+                    description: `Desarrollo y mantenimiento de soluciones en C# dentro de Microsoft Dynamics. 
+                          Colaboración con equipos multifuncionales para mejorar procesos bancarios y optimizar flujos de trabajo. 
+                          Garantía de soluciones bancarias seguras y escalables, alineadas con las mejores prácticas del sector.`,
+                },
+                {
+                    name: "RLUS (Proyecto Internacional)",
+                    description: `Automatización de procesos manuales, logrando ahorros en costos y tiempo en más de 20 automatizaciones. 
+                          Reducción de costos de esfuerzo humano en más de 100.000 € anuales. 
+                          Liderazgo en mantenimiento y optimización de procesos existentes para mejorar estabilidad y eficiencia.`,
+                },
+                {
+                    name: "Servicio Postal Español",
+                    description: `Diseño y desarrollo de procesos RPA, mejorando la eficiencia operativa en más de 20 flujos de trabajo. 
+                          Ahorro significativo en costos laborales, reduciendo más de 50.000 €. 
+                          Mantenimiento y optimización continua para garantizar el máximo rendimiento y satisfacción del usuario.`,
+                },
+            ],
         },
         {
             from: "June 2021",
