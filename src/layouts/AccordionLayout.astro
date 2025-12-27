@@ -3,36 +3,80 @@ import { Icon } from "astro-icon";
 const { title, icon } = Astro.props
 ---
 
-    <li class="relative border-b border-black" x-data="{selected:null}">
+<li class="minimal-accordion" x-data="{selected:null}">
   <button
     type="button"
-    class="w-full px-3 py-3 text-left"
+    class="accordion-button"
     @click="selected !== 1 ? selected = 1 : selected = null"
   >
-    <div class="flex items-center justify-between">
-      <h4
-        class="text-2xl font-mono  flex justify-center items-start"
-      >
-        <Icon name={icon} class="w-8 h-8 mr-4" />
+    <div class="accordion-header">
+      <h4 class="accordion-title">
         {title}
       </h4>
-
       <Icon
         name="ic:baseline-arrow-drop-down"
-        class="w-5 h-5"
+        class="accordion-arrow"
         x-bind:style="selected ==1 ? 'rotate:'+' 180deg' : ''"
       />
     </div>
   </button>
 
   <div
-    class="relative overflow-hidden transition-all max-h-0 duration-700"
-    style=""
+    class="accordion-content"
     x-ref="container1"
     x-bind:style="selected == 1 ? 'max-height: ' + $refs.container1.scrollHeight + 'px' : ''"
   >
-    <div class="py-4 px-2 ">
+    <div class="accordion-body">
       <slot />
     </div>
   </div>
 </li>
+
+<style>
+  .minimal-accordion {
+    border-bottom: 1px solid #000000;
+    list-style: none;
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+  }
+
+  .accordion-button {
+    width: 100%;
+    padding: 1rem 0;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #000000;
+  }
+
+  .accordion-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .accordion-title {
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin: 0;
+    color: #000000;
+  }
+
+  .accordion-arrow {
+    width: 1.25rem;
+    height: 1.25rem;
+    transition: transform 0.3s;
+    color: #000000;
+  }
+
+  .accordion-content {
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    max-height: 0;
+  }
+
+  .accordion-body {
+    padding: 1rem 0 1.5rem;
+    color: #000000;
+  }
+</style>

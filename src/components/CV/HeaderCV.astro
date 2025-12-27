@@ -9,51 +9,73 @@ const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[]
 ---
 
 <!-- Hero section -->
-<header class="mx-auto max-w-2xl py-8">
-  <article class="grid grid-cols-1 md:grid-cols-3 grid-rows-1 place-items-center w-[98vw] max-w-2xl">
-    <div class="grid text-center self-center whitespace-nowrap">
-	</div>
-	
-    <div class="grid text-center self-center whitespace-nowrap">
-		<h1 class="text-3xl ">{CONTENT.name}</h1>
-		<h3 class="text-lg ">{CONTENT.designation}</h3>
-		<h5 class="text-sm ">{CONTENT.location}</h5>
+<header class="minimal-header">
+  <div class="header-content">
+    <div class="header-text">
+		<h1>{CONTENT.name}</h1>
+		<h3>{CONTENT.designation}</h3>
     </div>
-
-    <div class="md:grid text-right self-end">
-      <div class="flex items-center pb-1">
-				{
-					iconLinks.map(({ href, icon, label }) => (
-						<a href={href} class="social" target="_blank">
-							<span class="sr-only">{label}</span>
-							<Icon icon={icon} size="25px"/>
-						</a>
-					))
-				}
-			</div>
-    </div>
-  </article>
+    <div class="header-links">
+			{
+				iconLinks.map(({ href, icon, label }) => (
+					<a href={href} class="social" target="_blank" aria-label={label}>
+						<Icon icon={icon} size="20px"/>
+					</a>
+				))
+			}
+		</div>
+  </div>
 </header>
 <style>
-  .socials {
+	.minimal-header {
+		max-width: 800px;
+		margin: 0 auto;
+		padding: 3rem 1rem 2rem;
+		font-family: 'Share Tech Mono', 'Courier New', monospace;
+	}
+
+	.header-content {
+		text-align: center;
+		border-bottom: 1px solid #000000;
+		padding-bottom: 1.5rem;
+	}
+
+	.header-text h1 {
+		font-size: 2rem;
+		margin-bottom: 0.5rem;
+		font-weight: 400;
+		color: #000000;
+	}
+
+	.header-text h3 {
+		font-size: 1rem;
+		margin-bottom: 0.25rem;
+		font-weight: 400;
+		color: #000000;
+	}
+
+	.header-text p {
+		font-size: 0.875rem;
+		color: #000000;
+		margin: 0;
+	}
+
+	.header-links {
 		display: flex;
-		align-items: center;
-		flex-wrap: wrap;
-		gap: 0.625rem;
-		font-size: var(--icon-size);
+		justify-content: center;
+		gap: 1rem;
+		margin-top: 1rem;
 	}
 
 	.social {
 		display: flex;
-		padding: var(--icon-padding);
 		text-decoration: none;
-		color: var(--accent-regular);
-		transition: color var(--theme-transition);
+		color: #000000;
+		transition: opacity 0.2s;
 	}
 
 	.social:hover,
 	.social:focus {
-		color: var(--accent-dark);
+		opacity: 0.6;
 	}
-
 </style>

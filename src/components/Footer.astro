@@ -1,13 +1,20 @@
 ---
 const currentYear = new Date().getFullYear();
 ---
-<footer class="w-full py-6">
-  <div class="container mx-auto flex flex-col md:flex-row justify-center items-center">
-    <div class="text-center md:text-center mb-4 md:mb-0">
-		<div class="group">
-			<p>&copy; {currentYear} Marcos Cuesta</p>
-	  	</div> 
-  </div>
+<footer class="minimal-footer">
+  <p>&copy; {currentYear} Marcos Cuesta</p>
 </footer>
+
+<style>
+  .minimal-footer {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem 1rem;
+    text-align: center;
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+    color: #000000;
+    border-top: 1px solid #000000;
+  }
+</style>
 
 

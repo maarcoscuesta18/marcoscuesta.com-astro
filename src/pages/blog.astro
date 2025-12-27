@@ -1,6 +1,22 @@
 ---
 import IndexLayout from '../layouts/indexLayout.astro'
-const allPosts = await Astro.glob('./posts/*.md');
+let allPosts = await Astro.glob('./posts/*.md');
+// Sort posts by date descending
+allPosts = allPosts.sort((a, b) => {
+  // Try to parse as ISO, fallback to dd/mm/yyyy, else 0
+  const parseDate = (d) => {
+    if (!d) return 0;
+    const iso = Date.parse(d);
+    if (!isNaN(iso)) return iso;
+    // fallback for dd/mm/yyyy
+    const [dd, mm, yyyy] = d.split('/');
+    if (yyyy && mm && dd) {
+      return new Date(+yyyy, mm - 1, +dd).getTime();
+    }
+    return 0;
+  };
+  return parseDate(b.frontmatter.date) - parseDate(a.frontmatter.date);
+});
 const pageTitle = "Newsletter - The Coding Blog";
 ---
 <IndexLayout title={pageTitle} languague="en">

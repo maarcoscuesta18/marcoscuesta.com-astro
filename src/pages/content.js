@@ -29,14 +29,17 @@ export const titles = {
 // About
 export const about = {
     en:
-        "Software Engineer with " +
+        "I'm a .NET Software Engineer with " +
         (new Date().getFullYear() - 2021).toString() +
-        " years of experience in software development based on .NET Framework. Passionate about technology and innovation specially in " +
-        "the fields of Web development, Backend development and Mobile Development.",
+        " years of experience building robust software solutions. I specialize in crafting clean, efficient code using C# and the .NET ecosystem, creating everything from applications to web services and backend systems.\n\n" +
+        "My passion lies in solving complex problems through elegant software design. Whether I'm developing backend systems, building web experiences with modern JavaScript frameworks, or working on mobile apps, I bring a focus on quality, performance, and user experience to every project.\n\n" +
+        "I thrive on continuous learning and staying current with the latest technologies, always looking for ways to improve my craft and deliver better solutions.\n\n Author of MediAI and Dressify on iOS and Android.",
     es:
-        "Ingeniero de software con " +
+        "Soy un Ingeniero de Software .NET con " +
         (new Date().getFullYear() - 2021).toString() +
-        " años de experiencia en el desarrollo de software basados en la plataforma .NET. Apasionado por la tecnología y la innovación, especialmente en los campos del desarrollo web, desarrollo backend y desarrollo móvil.",
+        " años de experiencia construyendo soluciones de software robustas. Me especializo en crear código limpio y eficiente usando C# y el ecosistema .NET, creando desde aplicaciones de escritorio hasta servicios web.\n\n" +
+        "Mi pasión radica en resolver problemas complejos a través de un diseño de software elegante. Ya sea desarrollando aplicaciones Windows con WinUI 3, construyendo experiencias web con frameworks JavaScript modernos, o trabajando en aplicaciones móviles, aporto un enfoque en calidad, rendimiento y experiencia de usuario a cada proyecto.\n\n" +
+        "Me apasiona el aprendizaje continuo y mantenerme al día con las últimas tecnologías, siempre buscando formas de mejorar mi oficio y entregar mejores soluciones.",
 };
 
 // Work Experience --> #work section
@@ -369,6 +372,19 @@ export const skills = [
         source_icon: "java.svg",
         source: "https://www.java.com/es/",
     },
+];
+
+export const techStack = [
+    "C#",
+    ".NET",
+    ".NET Framework",
+    "JavaScript",
+    "TypeScript",
+    "Astro",
+    "React",    
+    "React Native",
+    "Java",
+    "Android"
 ];
 export const privacy_policy_iberiaeye = {
     "en:": `

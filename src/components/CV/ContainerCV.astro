@@ -1,109 +1,59 @@
 ---
 import * as CONTENT from "../../pages/content.js"
-import AccordionLayout from "../../layouts/AccordionLayout.astro";
-import Card from "./CardCV.astro";
 const {currentRegion} = Astro.props;
 ---
 
+<div class="simple-container">
+  <section class="content-section">
+    <p class="description-text">{CONTENT.about[currentRegion]}</p>
+  </section>
 
-<ul class="shadow-box">
-  <AccordionLayout title={CONTENT.titles[currentRegion].about}  icon={"mdi:account-badge-outline"}>
-    {CONTENT.about[currentRegion]}
-  </AccordionLayout>
-  <AccordionLayout title={CONTENT.titles[currentRegion].work} icon={"ic:baseline-work-outline"}>
-      {
-        CONTENT.work[currentRegion].map((item) => {
-          return (
-            <Card
-              title={item.role}
-              timeframe={`${item.from} - ${item.to}`}
-              description={item.location}
-              tags={item.skills}
-              url={item.org_url}
-              url_name={item.org}
-            />
-          );
-        })
-      }
-  </AccordionLayout>
-  <AccordionLayout title={CONTENT.titles[currentRegion].projects} icon={"ion:md-build"}>
-    {
-      CONTENT.projects[currentRegion].map((item) => {
-        return (
-          <Card
-            title={item.title}
-            timeframe="2022-2023"
-            description={item.description}
-            tags={item.tech}
-            url={item.url}
-            url_name={"Open Project"}
-          />
-        );
-      })
-    }
-  </AccordionLayout>  
-  <AccordionLayout title={CONTENT.titles[currentRegion].certificates} icon={"carbon:certificate"}>
-      {
-        CONTENT.certificates[currentRegion].map((item) => {
-          return (
-            <Card
-              title={item.title}
-              timeframe={item.issued}
-              description={item.org}
-              tags={item.description}
-              url={item.url}
-              url_name={"View Certificate"}
-            />
-          );
-        })
-      }
-  </AccordionLayout>
-  <AccordionLayout title={CONTENT.titles[currentRegion].education} icon={"carbon:education"}>
-      {
-        CONTENT.education[currentRegion].map((item) => {
-          return (
-            <Card
-              title={item.course}
-              timeframe={`${item.from} - ${item.to}`}
-              description={item.location}
-              tags={""}
-              url={"#"}
-              url_name={item.institute}
-            />
-          );
-        })
-      }
-  </AccordionLayout>  
-  <AccordionLayout title={CONTENT.titles[currentRegion].languages} icon={"mdi:book"}>
-      {
-        CONTENT.languages[currentRegion].map((item) => {
-          return (
-            <Card
-              title={item.level}
-              timeframe={item.language}
-              description=""
-              tags=""
-              url={""}
-              url_name={""}
-            />
-          );
-        })
-      }
-  </AccordionLayout>
-  <AccordionLayout title={CONTENT.titles[currentRegion].contact} icon={"ri:contacts-book-fill"}>
-      {
-        CONTENT.contact[currentRegion].map((item) => {
-          return (
-            <Card
-              title={""}
-              timeframe={item.title}
-              description=""
-              tags=""
-              url={item.source}
-              url_name={item.source_name}
-            />
-          );
-        })
-      }
-  </AccordionLayout>
-</ul>
+  <section class="content-section">
+    <div class="tech-list">
+      {CONTENT.techStack.map((tech) => (
+        <span class="tech-item">{tech}</span>
+      ))}
+    </div>
+  </section>
+</div>
+
+<style>
+  .simple-container {
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+  }
+
+  .content-section {
+    margin-bottom: 3rem;
+  }
+
+  .description-text {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: #000000;
+    margin-bottom: 2rem;
+    white-space: pre-line;
+  }
+
+  .section-title {
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.5rem;
+    border-bottom: 1px solid #000000;
+  }
+
+  .tech-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+  }
+
+  .tech-item {
+    font-size: 0.875rem;
+    color: #000000;
+    padding: 0.5rem 1rem;
+    border: 1px solid #000000;
+    display: inline-block;
+  }
+</style>

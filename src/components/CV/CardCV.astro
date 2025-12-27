@@ -3,25 +3,89 @@ import { Icon } from "astro-icon";
 const { timeframe, title, description, url, tags, url_name } = Astro.props
 ---
 
-<div class="grid grid-cols-3 grid-rows-1 w-full p-2 place-items-center border-b-[1px] border-dashed py-8 border-gray-700">
-    <div class="self-start justify-self-start">
-        <p class=" text-base">
-            { timeframe }
-        </p>
+<div class="minimal-card">
+    <div class="card-timeframe">
+        <p>{timeframe}</p>
     </div>
 
-    <div class="self-start justify-self-start text-left">
-        <p class="text-lg ">{title}</p>
-        <p class="text-sm ">{description}</p>
-        <sub class="text-xs ">{tags}</sub>
+    <div class="card-content">
+        {title && <p class="card-title">{title}</p>}
+        {description && <p class="card-description">{description}</p>}
+        {tags && <p class="card-tags">{tags}</p>}
     </div>
 
-    <div class="self-start justify-self-end">
-        <a href={url} target="_blank" class="text-base text-right  flex justify-center items-center">
-            {url_name}
-            {
-               url !== "#" && <Icon name="icon-park-outline:unlink" class="w-4 h-4 ml-2" />
-            }
-        </a>
-    </div>
+    {url && url !== "#" && (
+        <div class="card-link">
+            <a href={url} target="_blank" class="card-link-text">
+                {url_name}
+            </a>
+        </div>
+    )}
 </div>
+
+<style>
+  .minimal-card {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    gap: 1rem;
+    padding: 1.5rem 0;
+    border-bottom: 1px dashed #000000;
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+  }
+
+  .card-timeframe {
+    font-size: 0.875rem;
+    color: #000000;
+  }
+
+  .card-content {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .card-title {
+    font-size: 1rem;
+    font-weight: 400;
+    margin: 0;
+    color: #000000;
+  }
+
+  .card-description {
+    font-size: 0.875rem;
+    margin: 0;
+    color: #000000;
+    line-height: 1.5;
+  }
+
+  .card-tags {
+    font-size: 0.75rem;
+    margin: 0;
+    color: #000000;
+  }
+
+  .card-link {
+    text-align: right;
+  }
+
+  .card-link-text {
+    font-size: 0.875rem;
+    color: #000000;
+    text-decoration: underline;
+  }
+
+  .card-link-text:hover {
+    opacity: 0.6;
+  }
+
+  @media (max-width: 768px) {
+    .minimal-card {
+      grid-template-columns: 1fr;
+      gap: 0.5rem;
+    }
+
+    .card-link {
+      text-align: left;
+    }
+  }
+</style>

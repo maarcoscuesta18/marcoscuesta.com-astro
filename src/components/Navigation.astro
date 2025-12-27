@@ -1,31 +1,23 @@
 ---
 import Icon from "./Icon/Icon.astro";
-import LanguaguePicker from "./LanguagePicker.astro";
 import type { iconPaths } from './Icon/IconPaths';
-import { getRelativeLocaleUrl } from 'astro:i18n';
-
-// defaultLocale is "es"
 
 const iconLinks: { label: string; href: string; icon: keyof typeof iconPaths }[] = [
 	{ label: 'GitHub', href: 'https://github.com/maarcoscuesta18', icon: 'github-logo' },
 	{ label: 'Linkedin', href: 'https://www.linkedin.com/in/marcos-cuesta-abanades/', icon: 'linkedin-logo' },
 ];
-const {lang} = Astro.props;
 
 const textLinks: { label: string; href: string }[] = [
-{ label: "Home", href: getRelativeLocaleUrl(lang, "") },
-    { label: "Luminary AI", href: "https://luminaryai.marcoscuesta.com" },
-    { label: "IberiaEye", href: "https://play.google.com/store/apps/details?id=com.marcoscuesta.camerasdgt" },
-    { label: "Blog", href: getRelativeLocaleUrl(lang, "blog") },
-	//{ label: "Pacman", href: "/pacman" },
+    { label: "Home", href: "/" },
+    { label: "Blog", href: "/blog" },
 ];
 ---
 <nav transition:persist>
 	<div class="menu-header">
-		<a href="/" class="site-title neonText">
+		<!--<a href="/" class="site-title neonText">
 			<Icon icon="terminal-window" color="var(--accent-regular)"  size="1.6em" gradient />
 			Marcos Cuesta
-		</a>
+		</a>-->
 		<menu-button>
 			<template>
 				<button class="menu-button" aria-expanded="false">
@@ -42,32 +34,12 @@ const textLinks: { label: string; href: string }[] = [
 					<li>
 						<a
 							aria-current={Astro.url.pathname === href}
-							class:list={['link',/*{active:Astro.url.pathname === href ||(href !== `/${lang}/` && Astro.url.pathname.startsWith(href)),}*/,]}
+							class:list={['link', {active: Astro.url.pathname === href || (href !== "/" && Astro.url.pathname.startsWith(href))}]}
 							href={href}>{label}</a>
 					</li>
 				))
 			}
 		</ul>
-		<div class="menu-footer">
-			<!-- <div class="socials">
-				{
-					iconLinks.map(({ href, icon, label }) => (
-						<a href={href} class="social">
-							<span class="sr-only">{label}</span>
-							<Icon icon={icon} />
-						</a>
-					))
-				}
-			</div>-->
-			<div class="theme-toggle">
-				<LanguaguePicker />
-				<button data-theme-toggle aria-label="toggle theme">
-					<span class="sr-only">Dark theme</span>
-					<span class="icon light"><Icon icon="sun" /></span>
-					<span class="icon dark"><Icon icon="moon-stars" /></span>
-				</button>
-			</div>
-		</div>
 	</div>
 
 	{/*no-script*/}
@@ -100,56 +72,6 @@ const textLinks: { label: string; href: string }[] = [
 		</div>
 	</noscript>
 </nav>
-<style>
-
-	.theme-toggle button {
-		display: flex;
-		border: 0;
-		padding: 0;
-		background-color: var(--gray-999);
-		cursor: pointer;
-	}
-
-	.icon {
-		z-index: 1;
-		position: relative;
-		display: none;
-
-		font-size: 1.2rem;
-		color: var(--accent-overlay);
-	}
-
-	.icon.light::before {
-		content: '';
-		z-index: -1;
-		position: absolute;
-		inset: 0;
-		border-radius: 999rem;
-	}
-
-	:global([data-theme="dark"]) .icon.light::before {
-		transform: translateX(100%);
-	}
-
-	:global([data-theme="dark"]) .icon.dark,:global(html:not([data-theme="dark"])) .icon.light,button[aria-pressed='false'] .icon.light {
-		color: var(--accent-regular);
-		display: block;
-	}
-
-	@media (prefers-reduced-motion: no-preference) {
-		.icon,
-		.icon.light::before {
-			transition: transform var(--theme-transition), color var(--theme-transition);
-		}
-	}
-
-	@media (forced-colors: active) {
-		.icon.light::before {
-			background-color: SelectedItem;
-		}
-	}
-</style>
-
 <script>
 	class MenuButton extends HTMLElement {
 		constructor() {
@@ -185,14 +107,13 @@ const textLinks: { label: string; href: string }[] = [
 		}
 	}
 	customElements.define('menu-button', MenuButton);
-
 </script>
 <style>
 	nav {
 		z-index: 9999;
 		position: relative;
-		font-family: var(--font-brand);
-		font-weight: 500;
+		font-family: 'Share Tech Mono', 'Courier New', monospace;
+		font-weight: 400;
 	}
 
 	.menu-header {
@@ -207,26 +128,26 @@ const textLinks: { label: string; href: string }[] = [
 		gap: 0.5rem;
 		align-items: center;
 		line-height: 1.1;
-		color: var(--gray-0);
+		color: #000000;
 		text-decoration: none;
+		font-family: 'Share Tech Mono', 'Courier New', monospace;
 	}
 
 	.menu-button {
 		position: relative;
 		display: flex;
-		border: 0;
-		border-radius: 999rem;
+		border: 1px solid #000000;
+		border-radius: 0;
 		padding: 0.5rem;
 		font-size: 1.5rem;
-		color: var(--gray-300);
-		background: radial-gradient(var(--gray-900), var(--gray-800) 150%);
-		box-shadow: var(--shadow-md);
+		color: #000000;
+		background: #ffffff;
+		cursor: pointer;
 	}
 
 	.menu-button[aria-expanded='true'] {
-		color: var(--gray-0);
-		background: linear-gradient(180deg, var(--gray-600), transparent),
-			radial-gradient(var(--gray-900), var(--gray-800) 150%);
+		color: #000000;
+		background: #ffffff;
 	}
 
 	.menu-button[hidden] {
@@ -237,8 +158,8 @@ const textLinks: { label: string; href: string }[] = [
 		position: absolute;
 		inset: -1px;
 		content: '';
-		background: var(--gradient-stroke);
-		border-radius: 999rem;
+		background: transparent;
+		border-radius: 0;
 		z-index: -1;
 	}
 
@@ -257,17 +178,19 @@ const textLinks: { label: string; href: string }[] = [
 		line-height: 1.2;
 		list-style: none;
 		padding: 2rem;
-		background-color: var(--gray-999);
+		background-color: #ffffff;
+		font-family: 'Share Tech Mono', 'Courier New', monospace;
 	}
 
 	.link {
 		display: inline-block;
-		color: var(--gray-300);
-		text-decoration: none;
+		color: #000000;
+		text-decoration: underline;
 	}
 
 	.link.active {
-		color: var(--gray-0);
+		color: #000000;
+		text-decoration: underline;
 	}
 
 	.menu-footer {
@@ -277,17 +200,11 @@ const textLinks: { label: string; href: string }[] = [
 		justify-content: space-between;
 		gap: 0.75rem;
 		padding: 1.5rem 2rem 1.5rem 1.5rem;
-		background-color: var(--gray-999);
+		background-color: #ffffff;
 		border-radius: 0 0 0.75rem 0.75rem;
-		box-shadow: var(--shadow-lg);
+		box-shadow: none;
 	}
 
-	
-	.theme-toggle {
-		display: flex;
-		align-items: center;
-		height: calc(var(--icon-size) + 2 * var(--icon-padding));
-	}
 
 	@media (min-width: 50em) {
 		nav {
@@ -328,18 +245,18 @@ const textLinks: { label: string; href: string }[] = [
 		.link {
 			padding: 0.5rem 1rem;
 			border-radius: 999rem;
-			transition: color var(--theme-transition), background-color var(--theme-transition);
+			transition: opacity 0.2s;
 		}
 
 		.link:hover,
 		.link:focus {
-			color: var(--gray-100);
-			background-color: var(--gray-800);
+			opacity: 0.6;
+			background-color: transparent;
 		}
 
 		.link.active {
-			color: var(--accent-text-over);
-			background-color: var(--accent-regular);
+			color: #000000;
+			background-color: transparent;
 		}
 
 		.menu-footer {

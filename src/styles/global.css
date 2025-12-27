@@ -168,11 +168,11 @@ body {
 }
 
 body {
-    background-color: var(--gray-999);
-    color: var(--gray-200);
-    font-family: var(--font-body);
+    background-color: #ffffff;
+    color: #000000;
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
     -webkit-font-smoothing: antialiased;
-    line-height: 1.5;
+    line-height: 1.6;
 }
 
 *,
@@ -188,7 +188,12 @@ img {
 }
 
 a {
-    color: var(--link-color);
+    color: #000000;
+    text-decoration: underline;
+}
+
+a:hover {
+    color: #333333;
 }
 
 h1,
@@ -196,10 +201,10 @@ h2,
 h3,
 h4,
 h5 {
-    line-height: 1.1;
-    font-family: var(--font-brand);
-    font-weight: 600;
-    color: var(--gray-100);
+    line-height: 1.2;
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+    font-weight: 400;
+    color: #000000;
 }
 
 h1 {
@@ -276,18 +281,14 @@ h5 {
         font-size: 12px;
     }
 }
+
+/* Minimal typewriter design */
+p, li, span, div {
+    font-family: 'Share Tech Mono', 'Courier New', monospace;
+}
 .backgrounds {
     min-height: 100%;
-    isolation: isolate;
-    background: var(--bg-image-main) center center / cover no-repeat;
-}
-@media (forced-colors: active) {
-    /* Deactivate custom backgrounds for high contrast users. */
-    .backgrounds {
-        background: none;
-        background-blend-mode: none;
-        --bg-gradient-size: none;
-    }
+    background: #ffffff;
 }
 .neonButton {
     border: 2px solid var(--accent-regular);
